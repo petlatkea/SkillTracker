@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Skill Tracker</title>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="css/materialize.min.css" />
+    <link rel="stylesheet" href="css/style.css">
+  </head>
+  <body>
+    <div class="navbar-fixed">
+    <nav>
+      <div class="nav-wrapper">
+        <a href="#" class="brand-logo">Skill Tracker <span class="username">XXXX</span></a>
+        <a href="#" data-target="mobile-demo" class="sidenav-trigger"><i class="material-icons">menu</i></a>
+        <ul id="nav-mobile" class="right hide-on-med-and-down">
+          <li class="logged-in"><a href="#">Progress</a></li>
+          <li class="logged-in"><a href="#">My Skills</a></li>
+          <li class="logged-in admin"><a href="#">All skills</a></li>
+          <li class="logged-in admin"><a href="#">Users</a></li>
+          <li class="logged-in"><a href="#" id="logout">Logout</a></li>
+          <li class="logged-out"><a href="#" class="modal-trigger" data-target="modal-login">Login</a></li>
+          <li class="logged-out"><a href="#" class="modal-trigger" data-target="modal-signup">Sign up</a></li>
+        </ul>
+      </div>
+    </nav>
+  </div>
+
+  <!-- USER HANDLING -->
+  <div id="modal-signup" class="modal">
+    <div class="modal-content">
+      <h4>Sign up</h4>
+      <p>Please use your KEA email-address when signing up.<br>Please choose a different password for this service.</p>
+      
+      <form id="signup-form">
+
+        <div class="input-field">
+          <input type="text" id="signup-name" required />
+          <label for="signup-name">Your name</label>
+        </div>
+        <div class="input-field">
+          <input type="email" id="signup-email" required />
+          <label for="signup-email">Email address</label>
+        </div>
+        <div class="input-field">
+          <input type="password" id="signup-password" required />
+          <label for="signup-password">Choose password</label>
+        </div>
+        <div class="input-field">
+          <input type="password" id="repeat-password" required />
+          <label for="repeat-password">Repeat password</label>
+        </div>
+
+        <button class="btn">Sign up</button>
+        <p class="error pink-text center-align"></p>
+      </form>
+    </div>
+  </div>
+
+  <div id="modal-login" class="modal">
+    <div class="modal-content">
+      <h4>Login</h4>
+
+      <form id="login-form">
+        <div class="input-field">
+          <input type="email" id="login-email" required />
+          <label for="login-email">Email address</label>
+        </div>
+        <div class="input-field">
+          <input type="password" id="login-password" required />
+          <label for="login-password">Your password</label>
+        </div>
+        <button class="btn">Login</button>
+        <p class="error pink-text center-align"></p>
+      </form>
+    </div>
+  </div>
+
+
+    <div id="svg_container"></div>
+
+    <div id="item-modal" class="modal ">
+      <div class="box">
+        <h1>fsafa</h1>
+        <h2>fsafas</h2>
+        <p data-data="type">type:</p>
+        <!-- TODO: Add this iframe - WHEN the modal is opened! Not before -->
+        <!-- <iframe data-data="video" width="560" height="315" src="screen1.svg" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe> -->
+        <p class="requires-line">Requires: <span data-data="requires"></span></p>
+        <p class="unlocks-line">Unlocks: <span data-data="unlocks"></span></p>
+        <hr>
+        <div class="switch has-requirements">
+          <label>
+            <input id="completed_activity" type="checkbox">
+            <span class="lever"></span>
+            <span class="complete_text">I have watched this video</span>
+          </label>
+        </div>
+        <p class="missing-requirements orange-text text-darken-2">You do not yet have the required skills to complete this activity.</p>
+
+        <!-- When the user has seen the video, change to checkbox! -->
+
+        <!-- <label>
+          <input type="checkbox" checked="checked" disabled="disabled" />
+          <span>You have watched this video</span>
+        </label> -->
+
+      </div>
+    </div>
+
+    <!-- The core Firebase JS SDK is always required and must be listed first -->
+<script src="https://www.gstatic.com/firebasejs/7.14.0/firebase-app.js"></script>
+
+<!-- TODO: Add SDKs for Firebase products that you want to use
+     https://firebase.google.com/docs/web/setup#available-libraries -->
+     <script src="https://www.gstatic.com/firebasejs/7.13.2/firebase-auth.js"></script>
+     <script src="https://www.gstatic.com/firebasejs/7.13.2/firebase-firestore.js"></script>
+
+<script>
+  // Your web app's Firebase configuration
+  var firebaseConfig = {
+    apiKey: "AIzaSyBV0jbbuF4F92srIxuBrqosdR53-JFQRZA",
+    authDomain: "skill-tracker-199bc.firebaseapp.com",
+    databaseURL: "https://skill-tracker-199bc.firebaseio.com",
+    projectId: "skill-tracker-199bc",
+    storageBucket: "skill-tracker-199bc.appspot.com",
+    messagingSenderId: "429778808107",
+    appId: "1:429778808107:web:a6936c8bd3a112c203296e"
+  };
+  // Initialize Firebase
+  firebase.initializeApp(firebaseConfig);
+
+  const auth = firebase.auth();
+  const db = firebase.firestore();
+</script>
+
+    <script src="js/materialize.min.js"></script>
+    <script src="js/users.js"></script>
+    <script src="js/progress.js"></script>
+    <script src="js/skills.js"></script>
+    <script src="js/main.js"></script>
+  </body>
+</html>

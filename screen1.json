@@ -1,0 +1,177 @@
+{
+  "clickables": [
+    {
+      "id": "v00_01",
+      "skills": {
+        "unlocks": "intro"
+      },
+      "initialclass": "enabled",
+      "type": "lecture",
+      "description": "How this course is structured"
+    },
+    {
+      "id": "v01_01",
+      "skills": {
+        "requires": "intro",
+        "unlocks": "what is"
+      },
+      "initialclass": "enabled",
+      "type": "lecture",
+      "description": "What is JavaScript"
+    },
+    {
+      "id": "v01_02",
+      "skills": {
+        "requires": "intro",
+        "unlocks": "environment"
+      },
+      "initialclass": "enabled",
+      "type": "video",
+      "description": "Setting up the environment"
+    },    
+    {
+      "id": "v02_01",
+      "skills": {
+        "requires": ["environment", "what is"],
+        "unlocks": "getting started"
+      },
+      "initialclass": "enabled",
+      "type": "video",
+      "description": "Getting started with JavaScript"
+    },
+    {
+      "id": "v02_02",
+      "skills": {
+        "requires": "getting started",
+        "unlocks": "console"
+      },
+      "initialclass": "enabled",
+      "type": "video",
+      "description": "console.log",
+      "subdescription": "letting your program \"talk\" to you"
+    },
+    {
+      "id": "v02_03",
+      "skills": {
+        "requires": "console",
+        "unlocks": "classList"
+      },
+      "initialclass": "disabled",
+      "type": "video",
+      "description": "classList add and remove",
+      "subdescription": "getting JavaScript to change classes"
+    },
+    {
+      "id": "v02_04",
+      "skills": {
+        "requires": "classList",
+        "unlocks": "querySelector"
+      },
+      "initialclass": "disabled",
+      "type": "video",
+      "description": "querySelector",
+      "subdescription": "selecting elements with JavaScript"
+    },
+    {
+      "id": "v02_05",
+      "skills": {
+        "requires": ["classList", "querySelector"],
+        "unlocks": "xp"
+      },
+      "initialclass": "disabled",
+      "type": "exercise",
+      "description": "Add animations to a game",
+      "subdescription": "training querySelector and classList"
+    },
+    {
+      "id": "v03_01",
+      "skills": {
+        "requires": ["classList", "querySelector"],
+        "unlocks": "functions"
+      },
+      "initialclass": "disabled",
+      "type": "video",
+      "description": "functions",
+      "subdescription": "grouping lines of JavaScript"
+    },
+    {
+      "id": "v03_02",
+      "skills": {
+        "requires": "functions",
+        "unlocks": "functions"
+      },
+      "initialclass": "disabled",
+      "type": "video",
+      "description": "more functions",
+      "subdescription": "building blocks for your program"
+
+    },
+    {
+      "id": "v03_03",
+      "skills": {
+        "requires": "functions",
+        "unlocks": "xp"
+      },
+      "initialclass": "disabled",
+      "type": "exercise",
+      "description": "Building functions for a game",
+      "subdescription": "training functions"
+    },
+    {
+      "id": "v04_01",
+      "skills": {
+        "requires": "functions",
+        "unlocks": ["events", "click event", "addEventListener"]
+      },
+      "initialclass": "disabled",
+      "type": "video",
+      "description": "events",
+      "subdescription": "making stuff happen when the user clicks"
+    },
+    {
+      "id": "v04_02",
+      "skills": {
+        "requires": "events",
+        "unlocks": "animationend"
+      },
+      "initialclass": "disabled",
+      "type": "video",
+      "description": "animationend event",
+      "subdescription": "\"waiting\" for animations to end"
+    },
+    {
+      "id": "v04_03",
+      "skills": {
+        "requires": "events",
+        "unlocks": "load event"
+      },
+      "initialclass": "disabled",
+      "type": "video",
+      "description": "load event",
+      "subdescription": "the one event to start it all"
+    },
+    {
+      "id": "v04_04",
+      "skills": {
+        "requires": "addEventListener",
+        "unlocks": "removeEventListener"
+      },
+      "initialclass": "disabled",
+      "type": "video",
+      "description": "removing event listeners",
+      "subdescription": "prevent things from happening all the time"
+    },
+    {
+      "id": "v04_05",
+      "skills": {
+        "requires": "removeEventListener",
+        "unlocks": ["addEventListener","removeEventListener"]
+      },
+      "initialclass": "disabled",
+      "type": "video",
+      "description": "addendum to removing event listeners",
+      "subdescription": "best practice for cleaning up"
+    }
+
+  ]
+}

@@ -1,0 +1,80 @@
+.bolder {
+  font-weight: 700;
+}
+
+.modal .box {
+  padding: 36px;
+}
+
+.modal .box h2, .modal .box h1 {
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+.modal .box h1 {
+  font-size: 330%;
+  white-space: nowrap;
+}
+
+.modal .box h2 {
+  font-size: 200%;
+}
+
+
+/* SVG styles */
+
+.lecture {
+  fill: #f0ffff;
+  stroke: #000000;
+  stroke-width: 2;
+}
+
+
+
+line, circle, rect {
+  stroke-width: 2;
+}
+
+.enabled {
+  fill: #ffffff;
+  stroke: #000000;
+}
+
+.disabled {
+  fill: #bfbfbf;
+  stroke: #7f7f7f;
+}
+
+.completed {
+  fill: #4caf50 ;
+}
+
+.completed .lecture {
+  fill: #4caf50 ;
+}
+
+.active {
+  fill: #fbb03b;
+  stroke: #000000;
+  stroke-width: 4;
+} 
+
+.active .lecture {
+  fill: #fbb03b;
+}
+
+/* TODO: make line disabled dashed */
+
+text {
+  font-family: "Montserrat", sans-serif;
+  stroke: none;
+  fill: black;
+}
+
+.description {
+  font-size: 14px;
+}
+
+.subdescription {
+  font-size: 10px;
+}
