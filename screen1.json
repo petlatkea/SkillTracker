@@ -27,7 +27,8 @@
       },
       "initialclass": "enabled",
       "type": "video",
-      "description": "Setting up the environment"
+      "description": "Setting up the environment",
+      "youtube": "y9bWJ7KXEbo"
     },    
     {
       "id": "v02_01",
@@ -37,7 +38,8 @@
       },
       "initialclass": "enabled",
       "type": "video",
-      "description": "Getting started with JavaScript"
+      "description": "Getting started with JavaScript",
+      "youtube": "mMLLUe6xI9o"
     },
     {
       "id": "v02_02",
@@ -48,7 +50,8 @@
       "initialclass": "enabled",
       "type": "video",
       "description": "console.log",
-      "subdescription": "letting your program \"talk\" to you"
+      "subdescription": "letting your program \"talk\" to you",
+      "youtube": "IhWjOSdTNFM"
     },
     {
       "id": "v02_03",
@@ -59,7 +62,8 @@
       "initialclass": "disabled",
       "type": "video",
       "description": "classList add and remove",
-      "subdescription": "getting JavaScript to change classes"
+      "subdescription": "getting JavaScript to change classes",
+      "youtube": "uKDHPPKWZZs"
     },
     {
       "id": "v02_04",
@@ -70,7 +74,8 @@
       "initialclass": "disabled",
       "type": "video",
       "description": "querySelector",
-      "subdescription": "selecting elements with JavaScript"
+      "subdescription": "selecting elements with JavaScript",
+      "youtube": "QtE-yf6nvFw"
     },
     {
       "id": "v02_05",
@@ -92,19 +97,20 @@
       "initialclass": "disabled",
       "type": "video",
       "description": "functions",
-      "subdescription": "grouping lines of JavaScript"
+      "subdescription": "grouping lines of JavaScript",
+      "youtube": "vV5syArgBKY"
     },
     {
       "id": "v03_02",
       "skills": {
         "requires": "functions",
-        "unlocks": "functions"
+        "unlocks": "more functions"
       },
       "initialclass": "disabled",
       "type": "video",
       "description": "more functions",
-      "subdescription": "building blocks for your program"
-
+      "subdescription": "building blocks for your program",
+      "youtube": "2tqhc22X2d8"
     },
     {
       "id": "v03_03",
@@ -126,7 +132,8 @@
       "initialclass": "disabled",
       "type": "video",
       "description": "events",
-      "subdescription": "making stuff happen when the user clicks"
+      "subdescription": "making stuff happen when the user clicks",
+      "youtube": "rsMrHaC_k3k"
     },
     {
       "id": "v04_02",
@@ -137,7 +144,8 @@
       "initialclass": "disabled",
       "type": "video",
       "description": "animationend event",
-      "subdescription": "\"waiting\" for animations to end"
+      "subdescription": "\"waiting\" for animations to end",
+      "youtube": "g-o9z78GQEI"
     },
     {
       "id": "v04_03",
@@ -148,7 +156,8 @@
       "initialclass": "disabled",
       "type": "video",
       "description": "load event",
-      "subdescription": "the one event to start it all"
+      "subdescription": "the one event to start it all",
+      "youtube": "_bP8PnPhvic"
     },
     {
       "id": "v04_04",
@@ -159,7 +168,8 @@
       "initialclass": "disabled",
       "type": "video",
       "description": "removing event listeners",
-      "subdescription": "prevent things from happening all the time"
+      "subdescription": "prevent things from happening all the time",
+      "youtube": "yomGSXt8E7A"
     },
     {
       "id": "v04_05",
@@ -169,8 +179,9 @@
       },
       "initialclass": "disabled",
       "type": "video",
-      "description": "addendum to removing event listeners",
-      "subdescription": "best practice for cleaning up"
+      "description": "clean up event listeners",
+      "subdescription": "best practice for removeEventListener",
+      "youtube": "_k8mvYg9DLA"
     }
 
   ]

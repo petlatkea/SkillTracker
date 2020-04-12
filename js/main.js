@@ -171,7 +171,16 @@ function openModal(event) {
   
   infobox.querySelector("[data-data='type']").textContent = itemtypes[item.type];
 
-  // TODO: Add video
+  // Add video - if exists
+  
+  if (item.youtube) {
+    document.querySelector(".video-wrapper").classList.remove("hide");
+    const videoframe = document.querySelector("[data-data='video']");
+    videoframe.src = "https://www.youtube.com/embed/" + item.youtube;
+
+  } else {
+    document.querySelector(".video-wrapper").classList.add("hide");
+  }
 
   // skills
   if (item.skills) {
