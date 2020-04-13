@@ -170,7 +170,6 @@ function openModal(event) {
   infobox.querySelector("[data-data='type']").textContent = itemtypes[item.type];
 
   // Add video - if exists
-  
   if (item.youtube) {
     document.querySelector(".video-wrapper").classList.remove("hide");
     const videoframe = document.querySelector("[data-data='video']");
@@ -179,6 +178,32 @@ function openModal(event) {
   } else {
     document.querySelector(".video-wrapper").classList.add("hide");
   }
+
+  // handle differences between exercise and video (an exercise could also have a video, so don't exclude it)
+  // hide "everything"
+  document.querySelector(".exercise-description").classList.add("hide");
+  document.querySelector(".complete_text.exercise").classList.add("hide");
+  document.querySelector(".complete_text.video").classList.add("hide");
+
+  if (item.type === "exercise") {
+    document.querySelector(".complete_text.exercise").classList.remove("hide");
+
+    // load description content
+    fetch(`exercises/${item.id} exercise.html`)
+      .then(response => response.text())
+      .then(html => {
+        // TODO: parse html, and extract body? - is it necessary?
+
+        document.querySelector(".exercise-description").innerHTML = html;
+
+        document.querySelector(".exercise-description").classList.remove("hide");
+    })
+
+
+  } else {
+    document.querySelector(".complete_text.video").classList.remove("hide");
+  }
+
 
   // skills
   if (item.skills) {

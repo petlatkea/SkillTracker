@@ -122,3 +122,54 @@ text {
 .subdescription {
   font-size: 10px;
 }
+
+/* exercise */
+
+.exercise-description {
+
+  border: 1px solid #aaa;
+  padding: 2em;
+  background-color: #eee;
+
+  font: normal 16px / 1.5em 'Open Sans',Helvetica,Arial,sans-serif;
+  color: #333;
+
+  }
+  
+  
+  .exercise-description h1 {
+    font-weight: normal;
+    font-size: 1.6em;
+    margin-bottom: .2em;
+  }
+  .exercise-description h1.subdescription {
+    margin-top: 0;
+    font-size: 1.4em;
+    margin-bottom: .8em;
+  }
+  
+  .exercise-description h2 {
+    font-weight: normal;
+    color: #6b546a;
+    font-size: 16px;
+    font-weight: 900;
+    margin: 0;
+  }
+  
+  .exercise-description h3 {
+    color: #565656;
+    font-weight: bold;
+    font-size: 100%;
+    margin: 0.5em 0 0.5em 0;
+  }
+  
+  .exercise-description p {
+    margin: 0 0 .5em 0;
+    font-size: 1em;
+    line-height: 1.5em;
+    max-width: 80ch;
+  }
+
+  .exercise-description li {
+    max-width: 80ch;
+  }
