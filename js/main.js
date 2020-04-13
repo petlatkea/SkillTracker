@@ -107,8 +107,6 @@ function prepareClickable(elm) {
     geom = g.querySelector("path");
   }
 
-  g.classList.add(elm.initialclass);
-
   // handle text
   const bbox = geom.getBBox();
   // create text element
@@ -285,6 +283,7 @@ function updateVisualTree() {
       }
     } else {
       g.classList.remove("disabled");
+      g.classList.add("enabled");
     }
 
     // check if it is completed or not

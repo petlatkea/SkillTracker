@@ -5,7 +5,7 @@
       "skills": {
         "unlocks": "intro"
       },
-      "initialclass": "enabled",
+      
       "type": "lecture",
       "description": "How this course is structured"
     },
@@ -15,7 +15,7 @@
         "requires": "intro",
         "unlocks": "what is"
       },
-      "initialclass": "enabled",
+      
       "type": "lecture",
       "description": "What is JavaScript"
     },
@@ -25,7 +25,7 @@
         "requires": "intro",
         "unlocks": "environment"
       },
-      "initialclass": "enabled",
+      
       "type": "video",
       "description": "Setting up the environment",
       "youtube": "y9bWJ7KXEbo"
@@ -36,7 +36,7 @@
         "requires": ["environment", "what is"],
         "unlocks": "getting started"
       },
-      "initialclass": "enabled",
+      
       "type": "video",
       "description": "Getting started with JavaScript",
       "youtube": "mMLLUe6xI9o"
@@ -47,7 +47,7 @@
         "requires": "getting started",
         "unlocks": "console"
       },
-      "initialclass": "enabled",
+      
       "type": "video",
       "description": "console.log",
       "subdescription": "letting your program \"talk\" to you",
@@ -59,7 +59,7 @@
         "requires": "console",
         "unlocks": "classList"
       },
-      "initialclass": "disabled",
+      
       "type": "video",
       "description": "classList add and remove",
       "subdescription": "getting JavaScript to change classes",
@@ -71,7 +71,7 @@
         "requires": "classList",
         "unlocks": "querySelector"
       },
-      "initialclass": "disabled",
+      
       "type": "video",
       "description": "querySelector",
       "subdescription": "selecting elements with JavaScript",
@@ -83,7 +83,7 @@
         "requires": ["classList", "querySelector"],
         "unlocks": "xp"
       },
-      "initialclass": "disabled",
+      
       "type": "exercise",
       "description": "Add animations to a game",
       "subdescription": "training querySelector and classList"
@@ -94,7 +94,7 @@
         "requires": ["classList", "querySelector"],
         "unlocks": "functions"
       },
-      "initialclass": "disabled",
+      
       "type": "video",
       "description": "functions",
       "subdescription": "grouping lines of JavaScript",
@@ -106,7 +106,7 @@
         "requires": "functions",
         "unlocks": "more functions"
       },
-      "initialclass": "disabled",
+      
       "type": "video",
       "description": "more functions",
       "subdescription": "building blocks for your program",
@@ -118,7 +118,7 @@
         "requires": "functions",
         "unlocks": "xp"
       },
-      "initialclass": "disabled",
+      
       "type": "exercise",
       "description": "Building functions for a game",
       "subdescription": "training functions"
@@ -129,7 +129,7 @@
         "requires": "functions",
         "unlocks": ["events", "click event", "addEventListener"]
       },
-      "initialclass": "disabled",
+      
       "type": "video",
       "description": "events",
       "subdescription": "making stuff happen when the user clicks",
@@ -141,7 +141,7 @@
         "requires": "events",
         "unlocks": "animationend"
       },
-      "initialclass": "disabled",
+      
       "type": "video",
       "description": "animationend event",
       "subdescription": "\"waiting\" for animations to end",
@@ -153,7 +153,7 @@
         "requires": "events",
         "unlocks": "load event"
       },
-      "initialclass": "disabled",
+      
       "type": "video",
       "description": "load event",
       "subdescription": "the one event to start it all",
@@ -165,7 +165,7 @@
         "requires": "addEventListener",
         "unlocks": "removeEventListener"
       },
-      "initialclass": "disabled",
+      
       "type": "video",
       "description": "removing event listeners",
       "subdescription": "prevent things from happening all the time",
@@ -177,7 +177,7 @@
         "requires": "removeEventListener",
         "unlocks": ["addEventListener","removeEventListener"]
       },
-      "initialclass": "disabled",
+      
       "type": "video",
       "description": "clean up event listeners",
       "subdescription": "best practice for removeEventListener",
