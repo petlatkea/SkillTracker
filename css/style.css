@@ -2,6 +2,10 @@
   font-weight: 700;
 }
 
+.brand-logo {
+  margin-left: .7em;
+}
+
 .modal .box {
   padding: 36px;
 }
@@ -36,8 +40,21 @@
 
 /* SVG styles */
 
+#info {
+  opacity: .25;
+}
+
+
+
+.dashed {
+  
+
+  stroke-dasharray: 6 4;
+  stroke-width: 1;
+}
+
 .lecture {
-  fill: #f0ffff;
+  
   stroke: #000000;
   stroke-width: 2;
 }
@@ -48,33 +65,47 @@ line, circle, rect {
   stroke-width: 2;
 }
 
-.enabled {
+.enabled, .enabled .lecture {
   fill: #ffffff;
   stroke: #000000;
+  
 }
 
-.disabled {
+.enabled .lecture, .enabled .video, .enabled .exercise {
+  transform-box: fill-box;
+  transform-origin: center center;
+  animation: shortpulse .4s cubic-bezier(.67,.47,.33,1.46) 1;
+}
+
+@keyframes shortpulse {
+  0% {
+    transform: scale(1);
+  }
+  20% {
+    transform: scale(.8);
+  }
+  
+  100% {
+    transform: scale(1);
+  }
+}
+
+.disabled, .disabled .lecture {
   fill: #bfbfbf;
   stroke: #7f7f7f;
 }
 
-.completed {
+.completed, .completed .lecture {
   fill: #4caf50 ;
 }
 
-.completed .lecture {
-  fill: #4caf50 ;
-}
 
-.active {
+.active, .active .lecture {
   fill: #fbb03b;
   stroke: #000000;
   stroke-width: 4;
 } 
 
-.active .lecture {
-  fill: #fbb03b;
-}
 
 /* TODO: make line disabled dashed */
 

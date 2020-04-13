@@ -1,89 +1,86 @@
-<svg
-      xmlns="http://www.w3.org/2000/svg"
-      width="1920"
-      height="1080"
-      viewBox="0 0 1920 1080"
-    >
-      <defs>
-        <style>
-    
-
-        
-        </style>
-      </defs>
-      <g id="screen1">
-        <g id="v00_01">
-          <line x1="166" y1="36" x2="36" y2="80"></line>
-          <line x1="166" y1="36" x2="250" y2="100"></line>
-          <path class="lecture" d="M150,20h32c-16 20, 16 20, 0 40h-32c16 -20, -16 -20, 0 -40"/>
-        </g>
-
-        <g id="v01_01">
-          <line x1="36" y1="120" x2="166" y2="164"></line>
-          <path class="lecture" d="M20,80h32c-16 20, 16 20, 0 40h-32c16 -20, -16 -20, 0 -40"/>
-        </g>
-
-        <g id="v01_02">
-          <line x1="250" y1="100" x2="166" y2="164"></line>
-          <circle class="video" cx="250" cy="100" r="16" />
-        </g>
-
-        <g id="v02_01">
-          <line x1="166" y1="164" x2="166" y2="228"></line>
-          <circle class="video" cx="166" cy="164" r="16" />
-        </g>
-        <g id="v02_02">
-          <line x1="166" y1="228" x2="166" y2="292"></line>
-          <circle class="video" cx="166" cy="228" r="16" />
-        </g>
-        <g id="v02_03">
-          <line x1="166" y1="292" x2="166" y2="356"></line>
-          <circle class="video" cx="166" cy="292" r="16" />
-        </g>
-        <g id="v02_04">
-          <line x1="166" y1="356" x2="166" y2="420"></line>
-          <circle class="video" cx="166" cy="356" r="16" />
-        </g>
-        <g id="v02_05">
-          <line x1="166" y1="440" x2="166" y2="500"></line>
-          <rect class="exercise" x="150" y="410" width="32" height="32" />
-        </g>
-
-        <g id="v03_01">
-          <line x1="166" y1="500" x2="166" y2="564"></line>
-          <circle class="video" cx="166" cy="500" r="16"></circle>
-        </g>
-        <g id="v03_02">
-          <line x1="166" y1="564" x2="166" y2="620"></line>
-          <circle class="video" cx="166" cy="564" r="16"></circle>
-        </g>
-        <g id="v03_03">
-          <line x1="166" y1="640" x2="166" y2="716"></line>
-          <rect class="exercise" x="150" y="620" width="32" height="32" />
-        </g>
-
-        <g id="v04_01">
-          <line x1="166" y1="716" x2="20" y2="780"></line>
-          <line x1="166" y1="716" x2="250" y2="810"></line>
-          
-          <circle class="video" cx="166" cy="716" r="16"></circle>
-        </g>
-        <g id="v04_02">
-          <line x1="20" y1="780" x2="166" y2="874"></line>
-          
-          <circle class="video" cx="20" cy="780" r="16"></circle>
-        </g>
-        <g id="v04_03">
-          <line x1="250" y1="810" x2="166" y2="874"></line>
-          <circle class="video" cx="250" cy="810" r="16"></circle>
-        </g>
-        <g id="v04_04">
-          <line x1="166" y1="874" x2="210" y2="938"></line>
-          <circle class="video" cx="166" cy="874" r="16"></circle>
-        </g>
-        <g id="v04_05">
-          <circle class="video" cx="210" cy="938" r="16"></circle>
-        </g>
-
-      </g>
-    </svg>
+<?xml version="1.0"?>
+<svg width="1920" height="1080" xmlns="http://www.w3.org/2000/svg" xmlns:svg="http://www.w3.org/2000/svg">
+ <defs>
+  <!-- <style>line, circle, rect, .lecture {
+            stroke: #000000;
+            stroke-width: 2;
+            fill: #ffffff;
+          }</style> -->
+ </defs>
+ <g class="layer" id="tree">
+  <g id="screen1">
+   <g id="v00_01">
+    <line id="svg_1" x1="262" x2="132" y1="36" y2="80"/>
+    <line id="svg_2" x1="262" x2="346" y1="36" y2="100"/>
+    <path class="lecture" d="m246,20l32,0c-16,20 16,20 0,40l-32,0c16,-20 -16,-20 0,-40" id="svg_3"/>
+   </g>
+   <g id="v01_01">
+    <line id="svg_4" x1="132" x2="262" y1="120" y2="164"/>
+    <path class="lecture" d="m116,80l32,0c-16,20 16,20 0,40l-32,0c16,-20 -16,-20 0,-40" id="svg_5"/>
+   </g>
+   <g id="v01_02">
+    <line id="svg_6" x1="346" x2="262" y1="100" y2="164"/>
+    <circle class="video" cx="346" cy="100" id="svg_7" r="16"/>
+   </g>
+   <g id="v02_01">
+    <line id="svg_8" x1="262" x2="262" y1="164" y2="228"/>
+    <circle class="video" cx="262" cy="164" id="svg_9" r="16"/>
+   </g>
+   <g id="v02_02">
+    <line id="svg_10" x1="262" x2="262" y1="228" y2="292"/>
+    <circle class="video" cx="262" cy="228" id="svg_11" r="16"/>
+   </g>
+   <g id="v02_03">
+    <line id="svg_12" x1="262" x2="262" y1="292" y2="356"/>
+    <circle class="video" cx="262" cy="292" id="svg_13" r="16"/>
+   </g>
+   <g id="v02_04">
+    <line id="svg_14" x1="262" x2="262" y1="356" y2="420"/>
+    <circle class="video" cx="262" cy="356" id="svg_15" r="16"/>
+   </g>
+   <g id="v02_05">
+    <line id="svg_16" x1="262" x2="262" y1="440" y2="500"/>
+    <rect class="exercise" height="32" id="svg_17" width="32" x="246" y="410"/>
+   </g>
+   <g id="v03_01">
+    <line id="svg_18" x1="262" x2="262" y1="500" y2="564"/>
+    <circle class="video" cx="262" cy="500" id="svg_19" r="16"/>
+   </g>
+   <g id="v03_02">
+    <line id="svg_20" x1="262" x2="262" y1="564" y2="620"/>
+    <circle class="video" cx="262" cy="564" id="svg_21" r="16"/>
+   </g>
+   <g id="v03_03">
+    <line id="svg_22" x1="262" x2="262" y1="640" y2="716"/>
+    <rect class="exercise" height="32" id="svg_23" width="32" x="246" y="620"/>
+   </g>
+   <g id="v04_01">
+    <line id="svg_24" x1="262" x2="116" y1="716" y2="780"/>
+    <line id="svg_25" x1="262" x2="346" y1="716" y2="810"/>
+    <circle class="video" cx="262" cy="716" id="svg_26" r="16"/>
+   </g>
+   <g id="v04_02">
+    <line id="svg_27" x1="116" x2="262" y1="780" y2="874"/>
+    <circle class="video" cx="116" cy="780" id="svg_28" r="16"/>
+   </g>
+   <g id="v04_03">
+    <line id="svg_29" x1="346" x2="262" y1="810" y2="874"/>
+    <circle class="video" cx="346" cy="810" id="svg_30" r="16"/>
+   </g>
+   <g id="v04_04">
+    <line id="svg_31" x1="262" x2="306" y1="874" y2="938"/>
+    <circle class="video" cx="262" cy="874" id="svg_32" r="16"/>
+   </g>
+   <g id="v04_05">
+    <circle class="video" cx="306" cy="938" id="svg_33" r="16"/>
+   </g>
+  </g>
+ </g>
+ <g class="layer" id="info">
+  <line class="dashed" fill="none" id="svg_34" stroke="#000000" stroke-width="5" x1="50" x2="475" y1="463.5" y2="463.5"/>
+  <line class="dashed" fill="none" id="svg_35" stroke="#000000" stroke-width="5" x1="50" x2="475" y1="679" y2="679"/>
+  <text fill="#000000" font-family="Serif" font-size="32" font-weight="normal" id="svg_36" stroke="#000000" stroke-width="0" text-anchor="middle" transform="rotate(90, 69.5, 565.5)" x="69.5" xml:space="preserve" y="576.5">functions</text>
+  <text fill="#000000" font-family="Serif" font-size="32" font-weight="normal" id="svg_37" stroke="#000000" stroke-width="0" text-anchor="middle" transform="rotate(90, 69.5, 799)" x="69.5" xml:space="preserve" y="810">events</text>
+  <text fill="#000000" font-family="Serif" font-size="32" font-weight="normal" id="svg_38" stroke="#000000" stroke-width="0" text-anchor="middle" transform="rotate(90, 69.5, 321) matrix(1, 0, 0, 1, 0, 0)" x="69.5" xml:space="preserve" y="332.000001">css and classes</text>
+ </g>
+</svg>
