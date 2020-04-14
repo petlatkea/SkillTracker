@@ -182,7 +182,39 @@
       "description": "clean up event listeners",
       "subdescription": "best practice for removeEventListener",
       "youtube": "_k8mvYg9DLA"
+    },
+    {
+      "id": "e01_01",
+      "type": "video",
+      "description": "Why wont my $*@! class work?",
+      "subdescription": "How to check for errors when applying classes",
+      "skills": {
+        "requires": "classList",
+        "unlocks": "inspect classes"
+      }
+    },
+    {
+      "id": "e01_02",
+      "type": "video",
+      "description": "querySelector errors"
+    },
+    {
+      "id": "e01_03",
+      "type": "video",
+      "description": "Avoid error icons in Brackets"
+    },
+    {
+      "id": "e01_04",
+      "type": "video",
+      "description": "When functions don't work"
+    },
+    {
+      "id": "e01_05",
+      "type": "video",
+      "description": "Functions setting classes"
     }
+
+
 
   ]
 }

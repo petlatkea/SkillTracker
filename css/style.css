@@ -191,6 +191,11 @@ rect {
   stroke-width: 4;
 }
 
+.optional {
+  stroke: #7171e4;
+  stroke-width: 1;
+}
+
 /* TODO: make line disabled dashed */
 
 text {
