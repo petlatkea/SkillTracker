@@ -16,7 +16,7 @@
           <a href="#" data-target="mobile-demo" class="sidenav-trigger"><i class="material-icons">menu</i></a>
           <ul id="nav-mobile" class="right hide-on-med-and-down">
             <li class="logged-in"><a href="#">Progress</a></li>
-            <li class="logged-in"><a href="#">My Skills</a></li>
+            <li class="logged-in"><a href="#" class="modal-trigger" data-target="modal-myskills">My Skills</a></li>
             <li class="logged-in admin"><a href="#">All skills</a></li>
             <li class="logged-in admin"><a href="#">Users</a></li>
             <li class="logged-in"><a href="#" id="logout">Logout</a></li>
@@ -110,6 +110,22 @@
           <input type="checkbox" checked="checked" disabled="disabled" />
           <span>You have watched this video</span>
         </label> -->
+      </div>
+    </div>
+
+    <div id="modal-myskills" class="modal">
+      <div class="modal-content">
+        <h3>My skills</h3>
+        <p>These are the skills you have currently unlocked.</p>
+        <p>
+          <span class="plus">+</span> next to a skill, means that you have experience points in that skill.<br />
+          <span class="plus">+2</span> or a higher number, means that you have even more experience points.
+        </p>
+        <div class="myskills"></div>
+        <hr />
+        <h4>Locked skills</h4>
+        <p>These skills are still waiting to be unlocked.</p>
+        <div class="lockedskills"></div>
       </div>
     </div>
 

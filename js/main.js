@@ -14,9 +14,12 @@ const itemtypes = {
 
 function setupUI() {
   // setup modals
-
   const modals = document.querySelectorAll(".modal");
   M.Modal.init(modals);
+
+  // custom functions for some modals
+  const myskills = M.Modal.getInstance(document.querySelector("#modal-myskills"));
+  myskills.options.onOpenStart = openMySkills;
 }
 
 function setupUser(user) {
@@ -321,6 +324,35 @@ function updateVisualTree() {
       g.classList.remove("completed");
     }
   });
+}
+
+/* MySkills */
+function openMySkills() {
+  const allSkills = allAvailableSkills(clickables);
+
+  const modal = document.querySelector("#modal-myskills");
+  const unlockedskills = Object.getOwnPropertyNames(currentSkills);
+
+  // Find the skills that are still locked.
+  const lockedskills = allSkills.filter((skillName) => !unlockedskills.includes(skillName));
+
+  // TODO: Allow for sorting and ordering
+
+  // Show unlocked skills, with info about experience points
+  modal.querySelector(".myskills").innerHTML = unlockedskills
+    .map((skillName) => {
+      const skillValue = currentSkills[skillName];
+
+      if (skillValue === 1) {
+        return `<div class='chip'>${skillName}</div>`;
+      } else {
+        return `<div class='chip'>${skillName}<span class="plus">+${skillValue > 2 ? skillValue - 1 : ""}</span></div>`;
+      }
+    })
+    .join("");
+
+  // Show skills still locked.
+  modal.querySelector(".lockedskills").innerHTML = lockedskills.map((skillName) => `<div class='chip'>${skillName}</div>`).join("");
 }
 
 async function loadJSON(url) {

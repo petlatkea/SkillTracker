@@ -61,3 +61,17 @@ function readSkills() {
 function hasSkills(listOfSkills) {
   return listOfSkills.every((skill) => currentSkills[skill] !== undefined);
 }
+
+/* returns a list of all the skills found in the given array of items */
+function allAvailableSkills(clickables) {
+  // TODO: Allow for sorting by item-id or something that can't be seen directly in the skill-names
+
+  // Make a Set of all skills that can be unlocked
+  const skillNames = new Set(clickables.map((cl) => (cl.skills ? cl.skills.unlocks : [""])).flat());
+
+  // remove "xp" - that isn't really a skill
+  skillNames.delete("xp");
+
+  // Return as a plain array - to avoid Set-issues
+  return Array.from(skillNames);
+}
