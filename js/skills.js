@@ -4,12 +4,13 @@ let currentSkills = {};
 
 function resetSkills() {
   const user = auth.currentUser;
-  db.collection('skills').doc(user.uid).set({ intro: 1 }).then(() => {
-    readSkills();
-  });
-
+  db.collection("skills")
+    .doc(user.uid)
+    .set({ intro: 1 })
+    .then(() => {
+      readSkills();
+    });
 }
-
 
 // TODO: Could add multiple skills at once
 function addSkill(skillName) {
@@ -27,27 +28,36 @@ function addSkill(skillName) {
   data[skillName] = skillValue;
 
   // update skill
-  db.collection('skills').doc(user.uid).update(data).then(() => {
-    console.log(`Added skill ${skillName} to current user`);
-    
-  } )
+  db.collection("skills")
+    .doc(user.uid)
+    .update(data)
+    .then(() => {
+      console.log(`Added skill ${skillName} to current user`);
+    });
 }
-
 
 function readSkills() {
   const user = auth.currentUser;
 
-  db.collection('skills').doc(user.uid).onSnapshot(snapshot => {
-    // loaded skills for this user
-    console.log("re-read skills");
-    currentSkills = snapshot.data();
-    updateVisualTree();
-  }, function (err) {
-    console.error("Error reading skills: ", err.message);
-  });
+  db.collection("skills")
+    .doc(user.uid)
+    .onSnapshot(
+      (snapshot) => {
+        // loaded skills for this user
+        console.log("re-read skills");
+        // Make sure we don't set the list of skills to -undefined-
+        const skills = snapshot.data();
+        if (skills) {
+          currentSkills = skills;
+        }
+        updateVisualTree();
+      },
+      function (err) {
+        console.error("Error reading skills: ", err.message);
+      }
+    );
 }
 
 function hasSkills(listOfSkills) {
-  return listOfSkills.every(skill => currentSkills[skill] !== undefined);
-  
+  return listOfSkills.every((skill) => currentSkills[skill] !== undefined);
 }

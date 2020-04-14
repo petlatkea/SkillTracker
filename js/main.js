@@ -3,53 +3,54 @@
 window.addEventListener("DOMContentLoaded", start);
 
 let clickables = null;
+let loggedInUser = false;
 
 const itemtypes = {
-  "video": "Code-along video",
-  "lecture": "Informational video",
-  "exercise": "Exercise",
-  "assignment": "Milestone assignment"
-}
+  video: "Code-along video",
+  lecture: "Informational video",
+  exercise: "Exercise",
+  assignment: "Milestone assignment",
+};
 
 function setupUI() {
   // setup modals
-  
+
   const modals = document.querySelectorAll(".modal");
   M.Modal.init(modals);
 }
 
 function setupUser(user) {
-
   // TODO: Implement admin-only menus
 
   if (user) {
     // logged in!
 
-    // hide logged out menus
-    document.querySelectorAll(".logged-out").forEach(elm => elm.classList.add("hide"));
+    // hide logged out items
+    document.querySelectorAll(".logged-out").forEach((elm) => elm.classList.add("hide"));
     // show logged in menus
-    document.querySelectorAll(".logged-in").forEach(elm => elm.classList.remove("hide"));
+    document.querySelectorAll(".logged-in").forEach((elm) => elm.classList.remove("hide"));
 
-
-    db.collection("users").doc(user.uid).get().then(doc => {
-      document.querySelector(".username").textContent = "- " + doc.data().name;
-    }).catch(err => {
-      // Sometimes the doc isn't ready when the user is newly created - we just ignore that, and get again a bit later.
-      console.warn("Error during setupUser - ignored");
-    })
-
+    db.collection("users")
+      .doc(user.uid)
+      .get()
+      .then((doc) => {
+        document.querySelector(".username").textContent = "- " + doc.data().name;
+      })
+      .catch((err) => {
+        // Sometimes the doc isn't ready when the user is newly created - we just ignore that, and get again a bit later.
+        console.warn("Error during setupUser - ignored");
+      });
   } else {
     // not logged in
 
     // hide logged in menus
-    document.querySelectorAll(".logged-in").forEach(elm => elm.classList.add("hide"));
+    document.querySelectorAll(".logged-in").forEach((elm) => elm.classList.add("hide"));
     // show logged out menus
-    document.querySelectorAll(".logged-out").forEach(elm => elm.classList.remove("hide"));
-    
+    document.querySelectorAll(".logged-out").forEach((elm) => elm.classList.remove("hide"));
+
     document.querySelector(".username").textContent = "";
   }
 }
-
 
 async function start() {
   console.log("start");
@@ -65,14 +66,16 @@ async function start() {
 
   console.log("Loaded JSON!");
 
-
   prepareObjects();
   prepareClickables();
+
+  initializeUserHandling();
+
+  updateVisualTree();
 }
 
 function prepareObjects() {
-  clickables.forEach(clickable => {
-
+  clickables.forEach((clickable) => {
     // make skills into array
     if (clickable.skills) {
       if (typeof clickable.skills.requires === "string") {
@@ -83,10 +86,8 @@ function prepareObjects() {
         clickable.skills.unlocks = [clickable.skills.unlocks];
       }
     }
-
-  })
+  });
 }
-
 
 function prepareClickables() {
   console.log("prepare!");
@@ -97,7 +98,6 @@ function prepareClickable(elm) {
   // find svg g
   const g = document.querySelector(`#${elm.id}`);
   let geom = null;
-
 
   if (elm.type === "video") {
     geom = g.querySelector("circle");
@@ -124,7 +124,7 @@ function prepareClickable(elm) {
   if (elm.subdescription) {
     const subText = document.createElementNS("http://www.w3.org/2000/svg", "text");
     subText.textContent = elm.subdescription;
-    subText.classList.add("subdescription")
+    subText.classList.add("subdescription");
     subText.setAttribute("x", bbox.x + bbox.width + 6);
 
     textElm.setAttribute("y", bbox.y + 14);
@@ -133,24 +133,25 @@ function prepareClickable(elm) {
     g.append(subText);
   } else {
     textElm.setAttribute("y", bbox.y + bbox.height / 2 + 4);
-
   }
   g.append(textElm);
 
   // add click-event to geometry and both texts
   geom.addEventListener("click", openModal);
   textElm.addEventListener("click", openModal);
-  
 }
 
 function getItemWithId(id) {
-  return clickables.find(item => item.id === id);
+  return clickables.find((item) => item.id === id);
 }
 
-
 function openModal(event) {
-  const infobox = document.querySelector("#item-modal");
   const id = event.target.parentElement.id;
+  openInfoBox(id);
+}
+
+function openInfoBox(id) {
+  const infobox = document.querySelector("#item-modal");
   const item = getItemWithId(id);
 
   const hasCompleted = hasProgress("completed", { id: id });
@@ -166,7 +167,7 @@ function openModal(event) {
   // put data in infobox
   infobox.querySelector("h1").textContent = item.description;
   infobox.querySelector("h2").textContent = item.subdescription ? item.subdescription : "";
-  
+
   infobox.querySelector("[data-data='type']").textContent = itemtypes[item.type];
 
   // Add video - if exists
@@ -174,7 +175,6 @@ function openModal(event) {
     document.querySelector(".video-wrapper").classList.remove("hide");
     const videoframe = document.querySelector("[data-data='video']");
     videoframe.src = "https://www.youtube.com/embed/" + item.youtube;
-
   } else {
     document.querySelector(".video-wrapper").classList.add("hide");
   }
@@ -190,60 +190,65 @@ function openModal(event) {
 
     // load description content
     fetch(`exercises/${item.id} exercise.html`)
-      .then(response => response.text())
-      .then(html => {
+      .then((response) => response.text())
+      .then((html) => {
         // TODO: parse html, and extract body? - is it necessary?
 
         document.querySelector(".exercise-description").innerHTML = html;
 
         document.querySelector(".exercise-description").classList.remove("hide");
-    })
-
-
+      });
   } else {
     document.querySelector(".complete_text.video").classList.remove("hide");
   }
-
 
   // skills
   if (item.skills) {
     if (item.skills.requires) {
       const requires = infobox.querySelector("[data-data='requires']");
-      requires.innerHTML = item.skills.requires.map(requirement => {
-        const hasThisSkill = hasSkills([requirement]);
-        hasRequiredSkills = hasRequiredSkills & hasThisSkill;
-        // Mark if user has this requirement or not
-        return `<div class='chip ${hasThisSkill?"bolder":"pulse"}'>${requirement}</div>`;
-      }).join(" ");
+      requires.innerHTML = item.skills.requires
+        .map((requirement) => {
+          const hasThisSkill = hasSkills([requirement]);
+          hasRequiredSkills = hasRequiredSkills & hasThisSkill;
+
+          const modifier = loggedInUser ? (hasThisSkill ? "bolder" : "pulse") : "";
+
+          // Mark if user has this requirement or not
+          return `<div class='chip ${modifier}'>${requirement}</div>`;
+        })
+        .join(" ");
       infobox.querySelector(".requires-line").classList.remove("hide");
-    } 
+    }
 
     const unlocks = infobox.querySelector("[data-data='unlocks']");
 
     // Handle XP
     if (item.skills.unlocks[0] === "xp") {
-      unlocks.innerHTML = item.skills.requires.map(requirement => {
-        return `<div class='chip'>${requirement}+</div>`;
-      }).join(" ");
+      unlocks.innerHTML = item.skills.requires
+        .map((requirement) => {
+          return `<div class='chip'>${requirement}+</div>`;
+        })
+        .join(" ");
     } else {
       // normal skills
-      unlocks.innerHTML = item.skills.unlocks.map(unlocked => {
-        return `<div class='chip'>${unlocked}</div>`;
-        // TODO: Mark if user has already unlocked this skill
-      }).join(" ");
+      unlocks.innerHTML = item.skills.unlocks
+        .map((unlocked) => {
+          return `<div class='chip'>${unlocked}</div>`;
+          // TODO: Mark if user has already unlocked this skill
+        })
+        .join(" ");
     }
     infobox.querySelector(".unlocks-line").classList.remove("hide");
   }
 
-  if (hasRequiredSkills) {
+  if (loggedInUser && hasRequiredSkills) {
     document.querySelector(".missing-requirements").classList.add("hide");
     document.querySelector(".has-requirements").classList.remove("hide");
   } else {
     document.querySelector(".missing-requirements").classList.remove("hide");
     document.querySelector(".has-requirements").classList.add("hide");
   }
-  
-  
+
   // completion
   const checkbox = document.querySelector("#completed_activity");
   if (hasCompleted) {
@@ -263,15 +268,15 @@ function openModal(event) {
     const checkbox = document.querySelector("#completed_activity");
 
     if (checkbox.checked) {
-       // add all skills unlocked
-       if (item.skills) {
-         item.skills.unlocks.forEach(unlock => {
-           if (unlock === "xp") {
-             item.skills.requires.forEach(addSkill);
-           } else {
-             addSkill(unlock);
-           }
-         });           
+      // add all skills unlocked
+      if (item.skills) {
+        item.skills.unlocks.forEach((unlock) => {
+          if (unlock === "xp") {
+            item.skills.requires.forEach(addSkill);
+          } else {
+            addSkill(unlock);
+          }
+        });
       }
 
       // Mark this in progress!
@@ -284,16 +289,14 @@ function openModal(event) {
 
   addProgressEvent("openmodal", { id: id });
 
-
   const modal = M.Modal.getInstance(infobox);
   modal.options.onCloseEnd = closeThisModal;
   modal.open();
-  
 }
 
 function updateVisualTree() {
   // go through all clickables - if the user has the necessary skills, enable it, otherwise, disable
-  clickables.forEach(elm => {
+  clickables.forEach((elm) => {
     const g = document.querySelector(`#${elm.id}`);
 
     // only if it requires skills - otherwise, leave it enabled!
@@ -317,12 +320,8 @@ function updateVisualTree() {
     } else {
       g.classList.remove("completed");
     }
-
-    
   });
-
 }
-
 
 async function loadJSON(url) {
   const response = await fetch(url);
