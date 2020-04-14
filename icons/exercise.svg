@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 33 33">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: #73d277;
+        stroke: #000;
+        stroke-miterlimit: 10;
+      }
+    </style>
+  </defs>
+  <g id="exercise">
+    <rect id="svg_17" data-name="svg 17" class="cls-1" x="0.5" y="0.5" width="32" height="32"/>
+  </g>
+</svg>

@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 33 33">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: #73d277;
+        stroke: #000;
+        stroke-miterlimit: 10;
+      }
+    </style>
+  </defs>
+  <g id="video">
+    <circle id="svg_7" data-name="svg 7" class="cls-1" cx="16.5" cy="16.5" r="16"/>
+  </g>
+</svg>

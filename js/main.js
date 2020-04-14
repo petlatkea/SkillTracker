@@ -20,6 +20,10 @@ function setupUI() {
   // custom functions for some modals
   const myskills = M.Modal.getInstance(document.querySelector("#modal-myskills"));
   myskills.options.onOpenStart = openMySkills;
+
+  const myprogress = M.Modal.getInstance(document.querySelector("#modal-myprogress"));
+  myprogress.options.onOpenStart = openMyProgress;
+  
 }
 
 function setupUser(user) {
@@ -353,6 +357,32 @@ function openMySkills() {
 
   // Show skills still locked.
   modal.querySelector(".lockedskills").innerHTML = lockedskills.map((skillName) => `<div class='chip'>${skillName}</div>`).join("");
+}
+
+/* MyProgress */
+function openMyProgress() {
+  console.log("Open my progress");
+
+  // find all clickables - sort them v first, then e, 
+  const progresses = clickables.map(item => { 
+    return { id: item.id, type: item.type, description: item.description };
+  });
+  
+  // TODO: Sort
+  document.querySelector(".progresslist").innerHTML = progresses.map(item => {
+    // mark the li if the user has this progress or not
+    let mark = "missing";
+    if (hasProgress("completed", { id: item.id })) {
+      mark = "has";
+    }
+    return `<li class="${mark}"><span class="${item.type}"></span><span class="text">${item.description}</span></li>`;
+  }).join("");
+
+/*
+  <ul class="progresslist"></ul>
+
+  <li><span class="lecture"></span><span class="text">How this course is structured</span></li>
+*/
 }
 
 async function loadJSON(url) {

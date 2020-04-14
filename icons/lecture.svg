@@ -1,0 +1,12 @@
+<svg id="lecture" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 42.24 41">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: #73d277;
+        stroke: #000;
+        stroke-miterlimit: 10;
+      }
+    </style>
+  </defs>
+  <path id="svg_3" data-name="svg 3" class="cls-1" d="M5.12.5h32c-16,20,16,20,0,40h-32c16-20-16-20,0-40"/>
+</svg>

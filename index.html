@@ -15,7 +15,7 @@
           <a href="#" class="brand-logo">Skill Tracker <span class="username">XXXX</span></a>
           <a href="#" data-target="mobile-demo" class="sidenav-trigger"><i class="material-icons">menu</i></a>
           <ul id="nav-mobile" class="right hide-on-med-and-down">
-            <li class="logged-in"><a href="#">Progress</a></li>
+            <li class="logged-in"><a href="#" class="modal-trigger" data-target="modal-myprogress">My Progress</a></li>
             <li class="logged-in"><a href="#" class="modal-trigger" data-target="modal-myskills">My Skills</a></li>
             <li class="logged-in admin"><a href="#">All skills</a></li>
             <li class="logged-in admin"><a href="#">Users</a></li>
@@ -126,6 +126,21 @@
         <h4>Locked skills</h4>
         <p>These skills are still waiting to be unlocked.</p>
         <div class="lockedskills"></div>
+      </div>
+    </div>
+
+    <div id="modal-myprogress" class="modal">
+      <div class="modal-content">
+        <h3>My progress</h3>
+        <p>These are all the videos, lectures, exercises and milestones available.<br>
+        The ones you have completed are in a darker color.</p>
+        <p>
+          <ul class="progresslist">
+            
+          </ul>
+
+        </p>
+
       </div>
     </div>
 
