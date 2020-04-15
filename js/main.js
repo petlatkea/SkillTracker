@@ -18,15 +18,13 @@ function setupUI() {
   M.Modal.init(modals);
 
   // custom functions for some modals
-  const myskills = M.Modal.getInstance(document.querySelector("#modal-myskills"));
-  myskills.options.onOpenStart = openMySkills;
+  M.Modal.getInstance(document.querySelector("#modal-myskills")).options.onOpenStart = openMySkills;
 
-  const myprogress = M.Modal.getInstance(document.querySelector("#modal-myprogress"));
-  myprogress.options.onOpenStart = openMyProgress;
+  M.Modal.getInstance(document.querySelector("#modal-myprogress")).options.onOpenStart = openMyProgress;
   
-  const allusers = M.Modal.getInstance(document.querySelector("#modal-allusers"));
-  allusers.options.onOpenStart = openAllUsers;
+  M.Modal.getInstance(document.querySelector("#modal-allusers")).options.onOpenStart = openAllUsers;
 
+  M.Modal.getInstance(document.querySelector("#modal-allprogress")).options.onOpenStart = openAllProgress;
 }
 
 function setupUser(user) {
@@ -398,21 +396,33 @@ function openAllUsers() {
   table.innerHTML = "";
 
   // find all users
-  getUserList( function(users) {
+  getUserList().then( users => {
+
+    users.sort( (a,b) => {
+      return a.name.toLowerCase() > b.name.toLowerCase() ? 1 : -1;
+    });
+
+    // TODO: Make the list sortable from the UI
+    
     users.forEach( user => {
       // clone template
       const clone = template.content.cloneNode(true);
 
       // fill template
       clone.querySelector("[data-field='name']").textContent = user.name;
+      clone.querySelector("[data-field='role']").textContent = user.role;
 
       // append template
       table.append(clone);
-
     });
   } );
 }
 
+function openAllProgress() {
+  console.log("open all progress");
+
+  // TODO: Make work!
+}
 
 async function loadJSON(url) {
   const response = await fetch(url);

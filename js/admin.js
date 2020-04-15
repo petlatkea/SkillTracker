@@ -2,20 +2,31 @@
 
 // Admin functions - really shouldn't be accessible to all users ...
 
-// Returns a list of all users, with uid and name
-function getUserList( callback ) {
-    const allUsers = [];
+// Returns a (promise of a) list of all users, with uid, role and name
+function getUserList() {
 
-    db.collection("users").get().then((snapshot) => {
-        console.log("read all users");
-
-        snapshot.forEach( doc => {
-
-            const aUser = { uid: doc.id };
-            Object.assign(aUser,doc.data());
-
-            allUsers.push( aUser );
+    return new Promise((resolve, reject) => {
+        db.collection("users").get().then((snapshot) => {
+            console.log("read all users");
+            const allUsers = [];
+    
+            snapshot.forEach( doc => {
+                const user = { uid: doc.id };
+                const data = doc.data();
+                if( data.admin ) {
+                    user.role = "admin";
+                } else {
+                    user.role = "user";
+                }
+                user.name = data.name;
+    
+                allUsers.push(user);
+            });
+            
+            resolve( allUsers );
+    
+        }).catch(err => {
+            reject( err );
         });
-        callback( allUsers );
     });
 }
