@@ -62,86 +62,18 @@ nav .last-admin {
   font-size: 200%;
 }
 
-/* Progress */
+/* Progress table - same for single user and all users */ 
 
-#modal-myprogress {
-  width: 75%;
-}
-
-.progresslist {
-  min-height: 11em;
-  margin-top: 10em;
-  white-space: nowrap;
-}
-.progresslist li {
-  display: inline-block;
-  
-  width: 2.5em;
-}
-
-.progresslist li.missing {
-  filter: grayscale(95%) brightness(120%);
-  color: #888;
-}
-
-.progresslist .video::before {
-  content: " ";
-  position: absolute;
-  width: 1.5em;
-  height: 1.5em;
-
-  background-image: url(../icons/video.svg);
-  background-size: 100%;
-}
-
-.progresslist .lecture::before {
-  content: " ";
-  position: absolute;
-  width: 1.5em;
-  height: 1.5em;
-
-  background-image: url(../icons/lecture.svg);
-  background-size: 100%;
-}
-
-.progresslist .exercise::before {
-  content: " ";
-  position: absolute;
-  width: 1.5em;
-  height: 1.5em;
-
-  background-image: url(../icons/exercise.svg);
-  background-size: 100%;
-}
-
-.progresslist .milestone::before {
-  content: " ";
-  position: absolute;
-  width: 1.5em;
-  height: 1.85em;
-
-  background-image: url(../icons/milestone.svg);
-  background-size: 100%;
-}
-
-.progresslist .text {
-  position: absolute;
-
-  font-size: 90%;
-  transform-origin: bottom left;
-  transform: rotate(-50deg) translate(2.4em,.2em);
-}
-
-#progresstable {
+.progresstable {
   margin-top: 9em;
 }
 
-#progresstable th {
+.progresstable th {
   min-width: 1em;
   white-space: nowrap;
 }
 
-#progresstable .text {
+.progresstable .text {
   position: absolute;
   font-size: 90%;
   font-weight: 400;
@@ -149,18 +81,15 @@ nav .last-admin {
   transform: rotate(-50deg) translate(.5em,1em);
 }
 
-#progresstable td {
+.progresstable td {
   min-width: 2em;
 }
 
 
-#progresstable .missing {
+.progresstable .missing {
   filter: grayscale(95%) brightness(120%);
   color: #888;
 }
-
-
-
 
 /* SVG styles */
 

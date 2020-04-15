@@ -69,3 +69,52 @@ function readProgressEvents() {
       }
     );
 }
+
+/* Visual progress representation - HTML table */
+class ProgressTable {
+  constructor(selector) {
+    if (typeof selector === "string") {
+      selector = document.querySelector(selector);
+    }
+
+    this.progresstable = selector;
+
+    this.progresses = clickables.map(item => { 
+      return { id: item.id, type: item.type, description: item.description };
+    });
+
+    this.fields = [];
+
+    this.clearBody();
+  }
+
+  clearBody() {
+    this.progresstable.tBodies[0].innerHTML = "";
+  }
+
+  addField(fieldName) {
+    this.fields.push(fieldName);
+  }
+
+  addHeader() {
+    let header = "<tr>";
+    header += this.fields.map(field => `<th>${field}</th>`).join("");
+    header += this.progresses.map( progress => `<th><span class='text'>${progress.description}</span></th>`).join("");
+    header += "</tr>";
+    this.progresstable.tHead.innerHTML = header;
+  }
+
+  addRow(checkFunction, fields) {
+    let row = "<tr>";
+    if (fields) {
+      row += this.fields.map(fieldName => `<td>${fields[fieldName]}</td>`).join("");
+    }
+    row += this.progresses.map(item => {
+      const mark = checkFunction(item) ? "has" : "missing";
+      return `<td class="${mark} ${item.type}"><img src="icons/${item.type}.svg"></td>`;
+    }).join("");
+    row += "</tr>";
+
+    this.progresstable.tBodies[0].innerHTML += row;
+  }
+}

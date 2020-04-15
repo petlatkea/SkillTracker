@@ -364,29 +364,13 @@ function openMySkills() {
 function openMyProgress() {
   console.log("Open my progress");
 
-  // find all clickables - sort them v first, then e, 
-  const progresses = clickables.map(item => { 
-    return { id: item.id, type: item.type, description: item.description };
+  const progresstable = new ProgressTable(document.querySelector("#myprogress"));
+  progresstable.addHeader();
+
+  progresstable.addRow(function (item) {
+    return hasProgress("completed", { id: item.id });
   });
-  
-  // TODO: Sort
-  document.querySelector(".progresslist").innerHTML = progresses.map(item => {
-    // mark the li if the user has this progress or not
-    let mark = "missing";
-    if (hasProgress("completed", { id: item.id })) {
-      mark = "has";
-    }
-    return `<li class="${mark}"><span class="${item.type}"></span><span class="text">${item.description}</span></li>`;
-  }).join("");
-
-/*
-  <ul class="progresslist"></ul>
-
-  <li><span class="lecture"></span><span class="text">How this course is structured</span></li>
-*/
 }
-
-
 
 
 function openAllUsers() {
@@ -424,50 +408,20 @@ function openAllUsers() {
 function openAllProgress() {
   console.log("open all progress");
 
-  // find all clickables - TODO: sort them v first, then e, 
-  // These are the progresses all users are compared to
-  const progresses = clickables.map(item => { 
-    return { id: item.id, type: item.type, description: item.description };
-  });
-
-  // find the progress-table - clear it completely, and rebuild a new header
-  const progresstable = document.querySelector("#progresstable");
-
-  // build new header from progresses
-  let header = "<tr><th>User</th>";
-  header += progresses.map( progress => `<th><span class='text'>${progress.description}</span></th>`).join("");
-  header += "</tr>";
-
-  progresstable.tHead.innerHTML = header;
-
-  // Clear body
-  progresstable.tBodies[0].innerHTML = ""
+  const progresstable = new ProgressTable(document.querySelector("#allprogress"));
+  progresstable.addField("User");
+  progresstable.addHeader();
 
   // get all the users
   getUserList().then( users => {
-    // for each user, get all completed progress only ...
+    // for each user, get only all completed progress ...
     users.forEach( user => {
       getProgressForUser( user.uid ).then( completed => {
+        progresstable.addRow(hasProgress, { "User": user.name });
 
-        // Then build display
-        let html = `<tr><td>${user.name}</td>`;
-        
-        console.log("user: " + user.name);
-
-        console.log( completed );
-
-        html += progresses.map(item => {
-          // does the user have this progress?
-          // if completed contains an object with this items is - then this user has completed!
-          const mark = completed.find( progress => progress.id === item.id)?"has":"missing";
-        
-          return `<td class="${mark} ${item.type}"><img src="icons/${item.type}.svg"></td>`;
-        }).join("");
-     
-        html += "</tr>";
-
-        progresstable.tBodies[0].innerHTML += html;
-
+        function hasProgress(item) {
+          return completed.find(progress => progress.id === item.id) !== undefined;
+        }
       });
     });
   });
