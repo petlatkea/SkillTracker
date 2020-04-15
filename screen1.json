@@ -85,8 +85,8 @@
       },
       
       "type": "exercise",
-      "description": "Add animations to a game",
-      "subdescription": "training querySelector and classList"
+      "description": "Add and remove animations",
+      "subdescription": "add animations to the CoinClicker game"
     },
     {
       "id": "v03_01",
@@ -120,8 +120,8 @@
       },
       
       "type": "exercise",
-      "description": "Building functions for a game",
-      "subdescription": "training functions"
+      "description": "Building functions",
+      "subdescription": "create the functions for the CoinClicker game"
     },
     {
       "id": "v04_01",
@@ -174,8 +174,8 @@
     {
       "id": "v04_05",
       "skills": {
-        "requires": "removeEventListener",
-        "unlocks": ["addEventListener","removeEventListener"]
+        "requires": ["addEventListener","removeEventListener"],
+        "unlocks": "xp"
       },
       
       "type": "video",
@@ -183,6 +183,58 @@
       "subdescription": "best practice for removeEventListener",
       "youtube": "_k8mvYg9DLA"
     },
+    { 
+      "id": "v04_06",
+      "type": "video",
+      "skills": {
+        "requires": "animationend",
+        "unlocks": "animationiteration"
+      },
+      "description": "animationiteration",
+      "subdescription": "for neverending animations"
+    },
+    {
+      "id": "v04_07",
+      "type": "exercise",
+      "description": "Using events",
+      "subdescription": "experiment with click and animation events",
+      "skills": {
+        "requires": ["addEventListener", "removeEventListener", "click event"],
+        "unlocks": "xp"
+      }
+    },
+    {
+      "id": "v05_01",
+      "type": "lecture",
+      "description": "introducing State Machine Diagrams",
+      "youtube": "Pc4sx_VNw2U",
+      "skills": {
+        "requires": ["functions", "events"],
+        "unlocks": "StateMachineDiagrams"
+      }
+    },
+    {
+      "id": "v05_02",
+      "type": "exercise",
+      "description": "Build the CoinClicker game",
+      "subdescription": "- just clicking, and changing animations",
+      "skills": {
+        "requires": ["querySelector", "classList", "functions", "events", "StateMachineDiagrams"],
+        "unlocks": "CoinClicker mini"
+      }
+    },
+    {
+      "id": "v05_03",
+      "type": "milestone",
+      "skills": {
+        "requires": "CoinClicker mini",
+        "unlocks": "A growing sense of achievement"
+      },
+      "description": "04.02.03",
+      "subdescription": "\"one to throw away\" - build the core gameplay",
+      "details": "<p>Now you are going to build an experimental version of your own game - called <em>\"one to throw away\"</em> because we want to be able to play and try out things, and not worry about the final result.<br>See the complete assignment-description in Fronter, by following <a href='https://kea-fronter.itslearning.com/LearningToolElement/ViewLearningToolElement.aspx?LearningToolElementId=739609'>this link</a></p>"
+    },
+
     {
       "id": "e01_01",
       "type": "video",

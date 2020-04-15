@@ -8,7 +8,7 @@ let clickables = null;
 let loggedInUser = false;
 
 const itemtypes = {
-  video: "Code-along video",
+  video: "Coding video",
   lecture: "Informational video",
   exercise: "Exercise",
   assignment: "Milestone assignment",
@@ -110,6 +110,8 @@ function prepareClickable(elm) {
     geom = g.querySelector("rect");
   } else if (elm.type === "lecture") {
     geom = g.querySelector("path");
+  } else if (elm.type === "milestone") {
+    geom = g.querySelector("use");
   }
 
   // handle text
@@ -175,6 +177,9 @@ function openInfoBox(id) {
 
   infobox.querySelector("[data-data='type']").textContent = itemtypes[item.type];
 
+  // details
+  infobox.querySelector("[data-data='details']").innerHTML = item.details || "";
+  
   // Add video - if exists
   if (item.youtube) {
     document.querySelector(".video-wrapper").classList.remove("hide");
@@ -189,6 +194,7 @@ function openInfoBox(id) {
   document.querySelector(".exercise-description").classList.add("hide");
   document.querySelector(".complete_text.exercise").classList.add("hide");
   document.querySelector(".complete_text.video").classList.add("hide");
+  document.querySelector(".complete_text.milestone").classList.add("hide");
 
   if (item.type === "exercise") {
     document.querySelector(".complete_text.exercise").classList.remove("hide");
@@ -203,6 +209,8 @@ function openInfoBox(id) {
 
         document.querySelector(".exercise-description").classList.remove("hide");
       });
+  } else if (item.type === "milestone") {
+    document.querySelector(".complete_text.milestone").classList.remove("hide");
   } else {
     document.querySelector(".complete_text.video").classList.remove("hide");
   }

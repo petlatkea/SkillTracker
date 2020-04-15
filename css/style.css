@@ -91,6 +91,19 @@ nav .last-admin {
   color: #888;
 }
 
+/* UX helpers */
+
+.video, .lecture, .exercise, .milestone {
+  transition: fill .5s;
+}
+
+.video:hover, .lecture:hover, .exercise:hover, .milestone:hover {
+  cursor: pointer;
+  stroke: rgb(58, 58, 0);
+  filter: brightness(110%);
+}
+
+
 /* SVG styles */
 
 #info {
@@ -102,9 +115,13 @@ nav .last-admin {
   stroke-width: 1;
 }
 
-.lecture {
+.lecture, .milestone {
   stroke: #000000;
   stroke-width: 2;
+}
+
+#milestone polyline {
+  stroke-width: 4;
 }
 
 line,
