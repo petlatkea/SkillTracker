@@ -30,3 +30,44 @@ function getUserList() {
         });
     });
 }
+
+
+function getProgressForUser( uid ) {
+    return new Promise((resolve, reject) => {
+        db.collection("progress").doc(uid)
+        .collection("events").where( "event" ,"==", "completed")
+        .get().then((snapshot)=> {
+
+            // This could probably be made more elegant ...
+            const progresses = [];
+            snapshot.forEach( doc => {
+                progresses.push(doc.data());
+            });
+            resolve(progresses);
+        }).catch( err => reject(err) );
+    });
+}
+
+/*
+function readProgressEvents() {
+    const user = auth.currentUser;
+  
+    db.collection("progress")
+      .doc(user.uid)
+      .collection("events")
+      .onSnapshot(
+        (snapshot) => {
+          // load progressEvents for this user
+          console.log("re-read progress");
+  
+          currentProgress = [];
+          currentProgress = snapshot.docs.map((doc) => doc.data());
+  
+          // TODO: Mark this progress somewhere?
+          updateVisualTree();
+        },
+        function (err) {
+          console.error("Error reading progress: ", err.message);
+        }
+      );
+  }*/

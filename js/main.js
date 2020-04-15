@@ -386,6 +386,9 @@ function openMyProgress() {
 */
 }
 
+
+
+
 function openAllUsers() {
   console.log("open all users");
 
@@ -403,7 +406,7 @@ function openAllUsers() {
     });
 
     // TODO: Make the list sortable from the UI
-    
+
     users.forEach( user => {
       // clone template
       const clone = template.content.cloneNode(true);
@@ -421,7 +424,53 @@ function openAllUsers() {
 function openAllProgress() {
   console.log("open all progress");
 
-  // TODO: Make work!
+  // find all clickables - TODO: sort them v first, then e, 
+  // These are the progresses all users are compared to
+  const progresses = clickables.map(item => { 
+    return { id: item.id, type: item.type, description: item.description };
+  });
+
+  // find the progress-table - clear it completely, and rebuild a new header
+  const progresstable = document.querySelector("#progresstable");
+
+  // build new header from progresses
+  let header = "<tr><th>User</th>";
+  header += progresses.map( progress => `<th><span class='text'>${progress.description}</span></th>`).join("");
+  header += "</tr>";
+
+  progresstable.tHead.innerHTML = header;
+
+  // Clear body
+  progresstable.tBodies[0].innerHTML = ""
+
+  // get all the users
+  getUserList().then( users => {
+    // for each user, get all completed progress only ...
+    users.forEach( user => {
+      getProgressForUser( user.uid ).then( completed => {
+
+        // Then build display
+        let html = `<tr><td>${user.name}</td>`;
+        
+        console.log("user: " + user.name);
+
+        console.log( completed );
+
+        html += progresses.map(item => {
+          // does the user have this progress?
+          // if completed contains an object with this items is - then this user has completed!
+          const mark = completed.find( progress => progress.id === item.id)?"has":"missing";
+        
+          return `<td class="${mark} ${item.type}"><img src="icons/${item.type}.svg"></td>`;
+        }).join("");
+     
+        html += "</tr>";
+
+        progresstable.tBodies[0].innerHTML += html;
+
+      });
+    });
+  });
 }
 
 async function loadJSON(url) {

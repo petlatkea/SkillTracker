@@ -2,6 +2,10 @@
   font-weight: 700;
 }
 
+.wide {
+  min-width: 85%;
+}
+
 .plus {
   display: inline-block;
 
@@ -127,6 +131,36 @@ nav .last-admin {
   transform-origin: bottom left;
   transform: rotate(-50deg) translate(2.4em,.2em);
 }
+
+#progresstable {
+  margin-top: 9em;
+}
+
+#progresstable th {
+  min-width: 1em;
+  white-space: nowrap;
+}
+
+#progresstable .text {
+  position: absolute;
+  font-size: 90%;
+  font-weight: 400;
+  transform-origin: bottom left;
+  transform: rotate(-50deg) translate(.5em,1em);
+}
+
+#progresstable td {
+  min-width: 2em;
+}
+
+
+#progresstable .missing {
+  filter: grayscale(95%) brightness(120%);
+  color: #888;
+}
+
+
+
 
 /* SVG styles */
 
