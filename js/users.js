@@ -13,11 +13,25 @@ function authStateChanged(user) {
     console.log("User logged in");
     loggedInUser = true;
 
-    readProgressEvents();
-    readSkills();
+    // Read user info
+    db.collection("users").doc(user.uid).get().then((doc) => {
+      const data = doc.data();
+      console.log(data);
+      user.name = data.name;
+      // TODO: Use real claims for user roles! Just for securitys sake ...
+      user.isAdmin = data.admin !== undefined;
+
+      setupUser(user);
+      
+      readProgressEvents();
+      readSkills();
+    })
+     .catch((err) => {
+        // Sometimes the doc isn't ready when the user is newly created - we just ignore that, and get again a bit later.
+        console.warn("Error during setupUser - ignored");
+     });
 
     // NOTE: If user had just been created, data might not be available yet!
-    setupUser(user);
 
     // check if user is admin
     /*    

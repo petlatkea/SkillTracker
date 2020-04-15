@@ -28,8 +28,6 @@ function setupUI() {
 }
 
 function setupUser(user) {
-  // TODO: Implement admin-only menus
-
   if (user) {
     // logged in!
 
@@ -38,16 +36,12 @@ function setupUser(user) {
     // show logged in menus
     document.querySelectorAll(".logged-in").forEach((elm) => elm.classList.remove("hide"));
 
-    db.collection("users")
-      .doc(user.uid)
-      .get()
-      .then((doc) => {
-        document.querySelector(".username").textContent = "- " + doc.data().name;
-      })
-      .catch((err) => {
-        // Sometimes the doc isn't ready when the user is newly created - we just ignore that, and get again a bit later.
-        console.warn("Error during setupUser - ignored");
-      });
+    // re-hide admin-only menus if not admin
+    if (!user.isAdmin) {
+      document.querySelectorAll(".admin").forEach((elm) => elm.classList.add("hide"));
+    }
+
+    document.querySelector(".username").textContent = "- " + user.name;
   } else {
     // not logged in
 
