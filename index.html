@@ -15,10 +15,10 @@
           <a href="#" class="brand-logo">Skill Tracker <span class="username">XXXX</span></a>
           <a href="#" data-target="mobile-demo" class="sidenav-trigger"><i class="material-icons">menu</i></a>
           <ul id="nav-mobile" class="right hide-on-med-and-down">
+            <li class="logged-in admin"><a href="#" class="modal-trigger" data-target="modal-allusers">Users</a></li>
+            <li class="logged-in admin last-admin"><a href="#" class="modal-trigger" data-target="modal-allprogress">Progress overview</a></li>
             <li class="logged-in"><a href="#" class="modal-trigger" data-target="modal-myprogress">My Progress</a></li>
             <li class="logged-in"><a href="#" class="modal-trigger" data-target="modal-myskills">My Skills</a></li>
-            <li class="logged-in admin"><a href="#">All skills</a></li>
-            <li class="logged-in admin"><a href="#">Users</a></li>
             <li class="logged-in"><a href="#" id="logout">Logout</a></li>
             <li class="logged-out"><a href="#" class="modal-trigger" data-target="modal-login">Login</a></li>
             <li class="logged-out"><a href="#" class="modal-trigger" data-target="modal-signup">Sign up</a></li>
@@ -134,13 +134,49 @@
         <h3>My progress</h3>
         <p>These are all the videos, lectures, exercises and milestones available.<br>
         The ones you have completed are in a darker color.</p>
-        <p>
+        
           <ul class="progresslist">
             
           </ul>
 
-        </p>
+        
 
+      </div>
+    </div>
+
+    <div id="modal-allprogress" class="modal">
+      <div class="modal-content">
+        <h4>Progress overview</h4>
+        <p>This is the complete progress overview of all users in the system.<br>
+        ?Updates automatically?</p>
+
+      </div>
+    </div>
+
+    <div id="modal-allusers" class="modal">
+      <div class="modal-content">
+        <h4>Users</h4>
+        <p>These are all the users currently signed up for the system.</p>
+
+        <table id="usertable">
+          <thead>
+            <tr>
+              <th>Role</th>
+              <th>Name</th>
+              <th>Other info ...</th>
+            </tr>
+          </thead>
+          <tbody>
+            
+          </tbody>
+          <template id="user_in_table">
+            <tr>
+              <td data-field="role">ROLE</td>
+              <td data-field="name">NAME</td>
+              <td data-field="other">OTHER</td>
+            </tr>
+          </template>
+        </table>
       </div>
     </div>
 
@@ -172,6 +208,7 @@
 
     <script src="js/materialize.min.js"></script>
     <script src="js/users.js"></script>
+    <script src="js/admin.js"></script>
     <script src="js/progress.js"></script>
     <script src="js/skills.js"></script>
     <script src="js/main.js"></script>

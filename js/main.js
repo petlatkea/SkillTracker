@@ -24,6 +24,9 @@ function setupUI() {
   const myprogress = M.Modal.getInstance(document.querySelector("#modal-myprogress"));
   myprogress.options.onOpenStart = openMyProgress;
   
+  const allusers = M.Modal.getInstance(document.querySelector("#modal-allusers"));
+  allusers.options.onOpenStart = openAllUsers;
+
 }
 
 function setupUser(user) {
@@ -384,6 +387,32 @@ function openMyProgress() {
   <li><span class="lecture"></span><span class="text">How this course is structured</span></li>
 */
 }
+
+function openAllUsers() {
+  console.log("open all users");
+
+  const table = document.querySelector("table#usertable tbody")
+  const template = document.querySelector("template#user_in_table");
+  
+  // clear userlist
+  table.innerHTML = "";
+
+  // find all users
+  getUserList( function(users) {
+    users.forEach( user => {
+      // clone template
+      const clone = template.content.cloneNode(true);
+
+      // fill template
+      clone.querySelector("[data-field='name']").textContent = user.name;
+
+      // append template
+      table.append(clone);
+
+    });
+  } );
+}
+
 
 async function loadJSON(url) {
   const response = await fetch(url);

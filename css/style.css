@@ -22,6 +22,10 @@
   margin-left: 0.7em;
 }
 
+nav .last-admin {
+  border-right: 1px solid #ac4549;
+}
+
 .modal .box {
   padding: 36px;
 }
