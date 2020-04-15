@@ -1,6 +1,8 @@
 "use strict";
 
+window.addEventListener("DOMContentLoaded", setupUI);
 window.addEventListener("DOMContentLoaded", start);
+
 
 let clickables = null;
 let loggedInUser = false;
@@ -13,17 +15,18 @@ const itemtypes = {
 };
 
 function setupUI() {
+  console.log("setup ui")
+  // reset menu - hide all logged-in
+  document.querySelectorAll(".logged-in").forEach((elm) => elm.classList.add("hide"));
+
   // setup modals
   const modals = document.querySelectorAll(".modal");
   M.Modal.init(modals);
 
   // custom functions for some modals
   M.Modal.getInstance(document.querySelector("#modal-myskills")).options.onOpenStart = openMySkills;
-
   M.Modal.getInstance(document.querySelector("#modal-myprogress")).options.onOpenStart = openMyProgress;
-  
   M.Modal.getInstance(document.querySelector("#modal-allusers")).options.onOpenStart = openAllUsers;
-
   M.Modal.getInstance(document.querySelector("#modal-allprogress")).options.onOpenStart = openAllProgress;
 }
 
@@ -56,7 +59,7 @@ function setupUser(user) {
 
 async function start() {
   console.log("start");
-  setupUI();
+
   // load the SVG
   const svgData = await loadSVG("screen1.svg");
   document.querySelector("#svg_container").innerHTML = svgData;
