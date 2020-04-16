@@ -18,7 +18,8 @@
       },
       
       "type": "lecture",
-      "description": "What is JavaScript"
+      "description": "What is JavaScript",
+      "details": "<strong>Not really a video, just confirm that you saw the presentation in Teams on JavaScript.</strong>"
     },
     {
       "id": "v01_02",
