@@ -81,7 +81,7 @@
       "id": "v02_05",
       "skills": {
         "requires": ["classList", "querySelector"],
-        "unlocks": "xp"
+        "unlocks": ["xp", "CoinClicker start"]
       },
       
       "type": "exercise",
@@ -115,7 +115,7 @@
     {
       "id": "v03_03",
       "skills": {
-        "requires": "functions",
+        "requires": ["functions", "CoinClicker start"],
         "unlocks": "xp"
       },
       
@@ -216,10 +216,11 @@
     {
       "id": "v05_02",
       "type": "exercise",
-      "description": "Build the CoinClicker game",
+      "description": "Build the CoinClicker mini game",
       "subdescription": "- just clicking, and changing animations",
+
       "skills": {
-        "requires": ["querySelector", "classList", "functions", "events", "StateMachineDiagrams"],
+        "requires": ["querySelector", "classList", "functions", "events", "StateMachineDiagrams", "CoinClicker start"],
         "unlocks": "CoinClicker mini"
       }
     },
@@ -242,28 +243,44 @@
       "subdescription": "How to check for errors when applying classes",
       "skills": {
         "requires": "classList",
-        "unlocks": "inspect classes"
+        "unlocks": ["inspect classes", "bug basher"]
       }
     },
     {
       "id": "e01_02",
       "type": "video",
-      "description": "querySelector errors"
+      "description": "weird errormessages about classList",
+      "subdescription": "that are actually about querySelector",
+      "skills": {
+        "requires": "querySelector",
+        "unlocks": ["looking left", "bug basher"]
+      }
     },
     {
       "id": "e01_03",
       "type": "video",
-      "description": "Avoid error icons in Brackets"
+      "description": "Avoid error icons in Brackets",
+      "skills": {
+        "unlocks" : ["ESLint", "bug basher"]
+      }
     },
     {
       "id": "e01_04",
       "type": "video",
-      "description": "When functions don't work"
+      "description": "When functions just don't work",
+      "skills": {
+        "requires": ["functions", "console"],
+        "unlocks": ["xp", "bug basher"]
+      }
     },
     {
       "id": "e01_05",
       "type": "video",
-      "description": "Functions setting classes"
+      "description": "Why aren't my functions adding classes?",
+      "skills": {
+        "requires": ["functions", "classList"],
+        "unlocks": ["inspect classes", "bug basher"]
+      }
     }
 
 

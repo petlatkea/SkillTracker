@@ -207,9 +207,9 @@ text {
   color: #333;
 }
 
-.exercise-description h1 {
+.exercise-description h1.description {
   font-weight: normal;
-  font-size: 1.6em;
+  font-size: 2em;
   margin-bottom: 0.2em;
 }
 .exercise-description h1.subdescription {
