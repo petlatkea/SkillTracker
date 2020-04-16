@@ -235,24 +235,23 @@ function openInfoBox(id) {
 
     const unlocks = infobox.querySelector("[data-data='unlocks']");
 
-    // Handle XP
-    if (item.skills.unlocks[0] === "xp") {
-      unlocks.innerHTML = item.skills.requires
-        .map((requirement) => {
-          return `<div class='chip'>${requirement}+</div>`;
-        })
-        .join(" ");
-    } else {
+    
       // normal skills
       unlocks.innerHTML = item.skills.unlocks
         .map((unlocked) => {
-          return `<div class='chip'>${unlocked}</div>`;
+          // handle xp 
+          if (unlocked === "xp") {
+            return item.skills.requires.map(requirement => `<div class='chip'>${requirement}+</div>`).join(" ");
+          } else {
+            return `<div class='chip'>${unlocked}</div>`;
+          }
+
           // TODO: Mark if user has already unlocked this skill
         })
         .join(" ");
     }
     infobox.querySelector(".unlocks-line").classList.remove("hide");
-  }
+  
 
   if (loggedInUser && hasRequiredSkills) {
     document.querySelector(".missing-requirements").classList.add("hide");

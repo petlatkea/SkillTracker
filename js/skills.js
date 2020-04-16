@@ -6,7 +6,7 @@ function resetSkills() {
   const user = auth.currentUser;
   db.collection("skills")
     .doc(user.uid)
-    .set({ intro: 1 })
+    .set({ "Signup": 1 })
     .then(() => {
       readSkills();
     });

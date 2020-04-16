@@ -7,7 +7,8 @@
       },
       
       "type": "lecture",
-      "description": "How this course is structured"
+      "description": "How this course is structured",
+      "youtube": "CLZFKJDH3eg"
     },
     {
       "id": "v01_01",
@@ -83,7 +84,6 @@
         "requires": ["classList", "querySelector"],
         "unlocks": ["xp", "CoinClicker start"]
       },
-      
       "type": "exercise",
       "description": "Add and remove animations",
       "subdescription": "add animations to the CoinClicker game"
@@ -260,9 +260,11 @@
       "id": "e01_03",
       "type": "video",
       "description": "Avoid error icons in Brackets",
+      "details": "<p>This video is from outside of this course, but should still be very useful, if you want to get rid of those pesky error icons in Brackets.</p>",
       "skills": {
         "unlocks" : ["ESLint", "bug basher"]
-      }
+      },
+      "youtube": "GFFZ6s64YwA"
     },
     {
       "id": "e01_04",
