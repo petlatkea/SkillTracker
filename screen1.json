@@ -241,21 +241,25 @@
       "id": "e01_01",
       "type": "video",
       "description": "Why wont my $*@! class work?",
-      "subdescription": "How to check for errors when applying classes",
+      "subdescription": "How to find the error, when adding a class just didn't work.",
+      "details": "A quick recap of the video:<ol><li>Did it get added?</li><li>Is it added to the correct element?<ol><li>Should it be container instead of sprite or vice versa</li></ol></li><li>Is it the correct class?</li><li>Does the CSS actually work?</li></ol>",
       "skills": {
         "requires": "classList",
         "unlocks": ["inspect classes", "bug basher"]
-      }
+      },
+      "youtube": "PAL5TqKmlcE"
     },
     {
       "id": "e01_02",
       "type": "video",
-      "description": "weird errormessages about classList",
-      "subdescription": "that are actually about querySelector",
+      "description": "Weird errormessage about classList",
+      "subdescription": "that are really when the querySelector doesn't work",
+      "details": "<p>When you get one of these: <img src='images/cannotreadpropertyclasslistofnull.png' alt=\"Uncaught TypeError: Cannot read property 'classList' of null\"></p>",
       "skills": {
         "requires": "querySelector",
         "unlocks": ["looking left", "bug basher"]
-      }
+      },
+      "youtube": "1k17F9jmHbM"
     },
     {
       "id": "e01_03",
