@@ -89,7 +89,7 @@ class ProgressTable {
   }
 
   clearBody() {
-    this.progresstable.tBodies[0].innerHTML = "";
+    this.progresstable.innerHTML = "";
   }
 
   addField(fieldName) {
@@ -97,24 +97,27 @@ class ProgressTable {
   }
 
   addHeader() {
-    let header = "<tr>";
-    header += this.fields.map(field => `<th>${field}</th>`).join("");
-    header += this.progresses.map( progress => `<th><span class='text'>${progress.description}</span></th>`).join("");
-    header += "</tr>";
-    this.progresstable.tHead.innerHTML = header;
+    let header = "";
+    header += this.fields.map(field => `<div class="header ${field.toLowerCase()}">${field}</div>`).join("");
+    header += this.progresses.map( progress => `<div class="header"><span class='text'>${progress.description}</span></div>`).join("");
+    
+    this.progresstable.innerHTML += header;
+
+    // set the number of items for the table
+    this.progresstable.style.setProperty("--items", this.progresses.length);
   }
 
   addRow(checkFunction, fields) {
-    let row = "<tr>";
+    let row = "";
     if (fields) {
-      row += this.fields.map(fieldName => `<td>${fields[fieldName]}</td>`).join("");
+      row += this.fields.map(fieldName => `<div class="${fieldName.toLowerCase()}">${fields[fieldName]}</div>`).join("");
     }
     row += this.progresses.map(item => {
       const mark = checkFunction(item) ? "has" : "missing";
-      return `<td class="${mark} ${item.type}"><img src="icons/${item.type}.svg"></td>`;
+      return `<div class="${mark} ${item.type}"><img src="icons/${item.type}.svg"></div>`;
     }).join("");
-    row += "</tr>";
+    row += "";
 
-    this.progresstable.tBodies[0].innerHTML += row;
+    this.progresstable.innerHTML += row;
   }
 }
