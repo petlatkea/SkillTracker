@@ -125,6 +125,16 @@
       "subdescription": "create the functions for the CoinClicker game"
     },
     {
+      "id": "v03_04",
+      "type": "video",
+      "skills": {
+        "requires": ["classList", "functions"],
+        "unlocks": "force reflow"
+      },
+      "description": "Restarting animations",
+      "subdescription": "remove, then add the same animation class"
+    },
+    {
       "id": "v04_01",
       "skills": {
         "requires": "functions",
@@ -192,16 +202,27 @@
         "unlocks": "animationiteration"
       },
       "description": "animationiteration",
-      "subdescription": "for neverending animations"
+      "subdescription": "for neverending animations",
+      "youtube": "VA7Br8D9p-0"
     },
     {
       "id": "v04_07",
-      "type": "exercise",
-      "description": "Using events",
-      "subdescription": "experiment with click and animation events",
+      "type": "lecture",
+      "description": "A Walk in the park",
+      "subdescription": "tiny exercises that builds a library",
       "skills": {
         "requires": ["addEventListener", "removeEventListener", "click event"],
-        "unlocks": "xp"
+        "unlocks": "Path to the park"
+      }
+    },
+    {
+      "id": "v04_08",
+      "type": "video",
+      "description": "Event bubbling",
+      "subdescription": "problems and opportunities",
+      "skills": {
+        "requires": ["events", "addEventListener", "removeEventListener"],
+        "unlocks": ["event bubbling", "requestAnimationFrame"]
       }
     },
     {
@@ -274,19 +295,51 @@
     {
       "id": "e01_04",
       "type": "video",
-      "description": "When functions just don't work",
+      "description": "When functions just won't work",
       "skills": {
         "requires": ["functions", "console"],
         "unlocks": ["xp", "bug basher"]
+      },
+      "youtube": "jqXMaYtSfGQ"
+    }, 
+    {
+      "id": "p00_01",
+      "type": "exercise",
+      "description": "Setting up the park environment",
+      "subdescription": "preparing your library",
+      "skills": {
+        "requires": "Path to the park",
+        "unlocks": "The Park"
       }
     },
     {
-      "id": "e01_05",
-      "type": "video",
-      "description": "Why aren't my functions adding classes?",
+      "id": "p01_01",
+      "type": "exercise",
+      "subtype": "tiny",
+      "description": "click event",
       "skills": {
-        "requires": ["functions", "classList"],
-        "unlocks": ["inspect classes", "bug basher"]
+        "requires": ["The Park", "click event"],
+        "unlocks": "xp"
+      }
+    },
+    {
+      "id": "p01_02",
+      "type": "exercise",
+      "subtype": "tiny",
+      "description": "animationend event",
+      "skills": {
+        "requires": ["The Park", "animationend"],
+        "unlocks": "xp"
+      }
+    },
+    {
+      "id": "p01_03",
+      "type": "exercise",
+      "subtype": "tiny",
+      "description": "animationiteration event",
+      "skills": {
+        "requires": ["The Park", "animationiteration"],
+        "unlocks": "xp"
       }
     }
 

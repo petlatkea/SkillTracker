@@ -158,8 +158,13 @@ svg .video:hover, svg .lecture:hover, svg .exercise:hover, svg .milestone:hover 
 
 line,
 circle,
-rect {
+rect,
+polyline {
   stroke-width: 2;
+}
+
+polyline {
+  fill: none;
 }
 
 .enabled,

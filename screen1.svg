@@ -1,7 +1,7 @@
 <?xml version="1.0"?>
 <svg width="1920" height="1400" xmlns="http://www.w3.org/2000/svg" xmlns:svg="http://www.w3.org/2000/svg">
  <defs>
-  <!-- <style>line, .video, .exercise, .lecture, .milestone {
+  <!-- <style>line, .video, .exercise, .lecture, .milestone, polyline {
             stroke: #000000;
             stroke-width: 2;
             fill: #ffffff;
@@ -13,139 +13,167 @@
           
           .optional {
           stroke: red;
-          }
-          </style>  -->
-          <g id="milestone" >
+          }</style> -->
+   <g id="milestone">
     <path d="M40.5,9.92v40H.52V10.52c0-.2,0-.4,0-.6A9.45,9.45,0,0,1,9.91.5H31.09A9.46,9.46,0,0,1,40.5,9.92Z"/>
     <line x1="0.5" y1="12.91" x2="40.52" y2="12.91"/>
     <polyline stroke="#bb0000" points="10.52 42.03 16.59 22.6 21 30.24 25.43 22.6 31.44 42.03"/>
   </g>
  </defs>
  <g class="layer">
-  <g class="layer" id="tree">
-   <g id="screen1">
-    <g id="v00_01">
-     <line  x1="262" x2="132" y1="36" y2="80"/>
-     <line  x1="262" x2="346" y1="36" y2="100"/>
-     <path class="lecture" d="m246,20l32,0c-16,20 16,20 0,40l-32,0c16,-20 -16,-20 0,-40" />
-    </g>
-    <g id="v01_01">
-     <line  x1="132" x2="262" y1="120" y2="164"/>
-     <path class="lecture" d="m116,80l32,0c-16,20 16,20 0,40l-32,0c16,-20 -16,-20 0,-40" />
-    </g>
-    <g id="v01_02">
-     <line  x1="346" x2="262" y1="100" y2="164"/>
-     <circle class="video" cx="346" cy="100"  r="16"/>
-    </g>
-    <g id="v02_01">
-     <line  x1="262" x2="262" y1="164" y2="228"/>
-     <circle class="video" cx="262" cy="164"  r="16"/>
-    </g>
-    <g id="v02_02">
-     <line  x1="262" x2="262" y1="228" y2="292"/>
-     <circle class="video" cx="262" cy="228"  r="16"/>
-    </g>
-    <g id="v02_03">
-     <line  x1="262" x2="262" y1="292" y2="356"/>
-     <line class="optional" x1="262" x2="585" y1="327" y2="327"/>
-     <circle class="video" cx="262" cy="292"  r="16"/>
-    </g>
-    <g id="v02_04">
-     <line  x1="262" x2="262" y1="356" y2="420"/>
-     <line class="optional"            x1="262" x2="585" y1="392" y2="392"/>
-     <circle class="video" cx="262" cy="356"   r="16"/>
-    </g>
-    <g id="v02_05">
-     <line  x1="262" x2="262" y1="440" y2="500"/>
-     <rect class="exercise" height="32"  width="32" x="246" y="410"/>
-    </g>
-    <g id="v03_01">
-     <line  x1="262" x2="262" y1="500" y2="564"/>
-     <line class="optional" x1="262" x2="585" y1="500" y2="500"/>
-     <circle class="video" cx="262" cy="500"  r="16"/>
-    </g>
-    <g id="v03_02">
-     <line  x1="262" x2="262" y1="564" y2="620"/>
-      <line class="optional" x1="262" x2="485" y1="600" y2="600"/>
-  <line class="optional" x1="585" x2="485" y1="569" y2="600"/>
-  <line class="optional" x1="585" x2="485" y1="629" y2="600"/>
+   <g class="layer" id="tree">
+    <g id="screen1">
+     <g id="v00_01">
+      <line id="svg_2" x1="262" x2="132" y1="36" y2="80"/>
+      <line id="svg_3" x1="262" x2="346" y1="36" y2="100"/>
+      <path class="lecture" d="m246,20l32,0c-16,20 16,20 0,40l-32,0c16,-20 -16,-20 0,-40" id="svg_4"/>
+     </g>
+     <g id="v01_01">
+      <line id="svg_5" x1="132" x2="262" y1="120" y2="164"/>
+      <path class="lecture" d="m116,80l32,0c-16,20 16,20 0,40l-32,0c16,-20 -16,-20 0,-40" id="svg_6"/>
+     </g>
+     <g id="v01_02">
+      <line id="svg_7" x1="346" x2="262" y1="100" y2="164"/>
+      <circle class="video" cx="346" cy="100" id="svg_8" r="16"/>
+     </g>
+     <g id="v02_01">
+      <line id="svg_9" x1="262" x2="262" y1="164" y2="228"/>
+      <circle class="video" cx="262" cy="164" id="svg_10" r="16"/>
+     </g>
+     <g id="v02_02">
+      <line id="svg_11" x1="262" x2="262" y1="228" y2="292"/>
+      <circle class="video" cx="262" cy="228" id="svg_12" r="16"/>
+     </g>
+     <g id="v02_03">
+      <line id="svg_13" x1="262" x2="262" y1="292" y2="356"/>
+      <line class="optional" id="svg_14" x1="262" x2="585" y1="327" y2="327"/>
+      <circle class="video" cx="262" cy="292" id="svg_15" r="16"/>
+     </g>
+     <g id="v02_04">
+      <line id="svg_16" x1="262" x2="262" y1="356" y2="420"/>
+      <line class="optional" id="svg_17" x1="262" x2="585" y1="392" y2="392"/>
+      <circle class="video" cx="262" cy="356" id="svg_18" r="16"/>
+     </g>
+     <g id="v02_05">
+      <line id="svg_19" x1="262" x2="262" y1="440" y2="500"/>
+      <rect class="exercise" height="32" id="svg_20" width="32" x="246" y="410"/>
+     </g>
+     <g id="v03_01">
+      <line id="svg_21" x1="262" x2="262" y1="500" y2="564"/>
+      <line class="optional" id="svg_22" x1="262" x2="585" y1="500" y2="500"/>
+      <circle class="video" cx="262" cy="500" id="svg_23" r="16"/>
+     </g>
+     <g id="v03_02">
+       <line id="svg_65" x1="262" x2="262" y1="564" y2="690"/>
+       <line class="optional" id="svg_66" x1="262" x2="584" y1="594" y2="594"/>
+       <circle class="video" cx="262" cy="564" id="svg_67" r="16"/>
+     </g>
+      <g id="v03_04">
+        <polyline points="340,646 272,646 272, 702"></polyline>
+        <circle class="video" cx="340" cy="646" id="svg_28" r="16"/>
+      </g>
+      
+     <g id="v03_03">
+      <line id="svg_29" x1="262" x2="262" y1="702" y2="778"/>
+      <rect class="exercise" height="32" id="svg_30" width="32" x="246" y="682"/>
+     </g>
+     <g id="v04_01">
+      <line id="svg_31" x1="262" x2="116" y1="778" y2="842"/>
+      <line id="svg_32" x1="262" x2="346" y1="778" y2="872"/>
+      <circle class="video" cx="262" cy="778" id="svg_33" r="16"/>
+     </g>
+     <g id="v04_02">
+      <line id="svg_34" x1="116.5" x2="86" y1="844.5" y2="939.50001"/>
+      <line id="svg_35" x1="116" x2="262" y1="842" y2="936"/>
+      <circle class="video" cx="116" cy="842" id="svg_36" r="16"/>
+     </g>
+     <g id="v04_03">
+      <line id="svg_37" x1="346" x2="262" y1="872" y2="936"/>
+      <circle class="video" cx="346" cy="872" id="svg_38" r="16"/>
+     </g>
+     <g id="v04_04">
+      <line id="svg_39" x1="262" x2="326" y1="934" y2="998"/>
+      <line id="svg_40" x1="262" x2="262" y1="934" y2="1052"/>
+      <circle class="video" cx="262" cy="934" id="svg_41" r="16"/>
+     </g>
+     <g id="v04_05">
+      <circle class="video" cx="326" cy="1000" id="svg_42" r="16"/>
+     </g>
+     <g id="v04_06">
+      <line class="dashed" id="svg_43" x1="86" x2="262" y1="941" y2="1052"/>
+      <circle class="video" cx="86" cy="941" id="svg_44" r="16"/>
+     </g>
+     <g id="v04_07">
+      <line id="svg_45" x1="262" x2="262" y1="1052" y2="1144"/>
+      <line id="svg_26"  x1="262" x2="940" y1="1070" y2="1070"/>
+      <path class="lecture" d="m246,1050l32,0c-16,20 16,20 0,40l-32,0c16,-20 -16,-20 0,-40" id="svg_72"/>
+      
+     </g>
+     <g id="v05_01">
+      <line id="svg_47" x1="262" x2="262" y1="1144" y2="1234"/>
+      <path class="lecture" d="m246,1140l32,0c-16,20 16,20 0,40l-32,0c16,-20 -16,-20 0,-40" id="svg_48"/>
+     </g>
+      
+      <g id="v04_08">
+        <polyline points="340,1208 272,1208 272, 1234"></polyline>
+        <circle class="video" cx="340" cy="1208" id="svg_84" r="16"/>
+      </g>
+      
+     <g id="v05_02">
+      <line id="svg_49" x1="262" x2="262" y1="1244" y2="1292"/>
+      <rect class="exercise" height="32" id="svg_50" width="32" x="246" y="1234"/>
+     </g>
+     <g id="v05_03">
+       
+       <use href="#milestone" class="milestone" x="242" y="1292"/>
+     </g>
+     <g id="e01_01">
+      <circle class="video optional" cx="585" cy="327" id="svg_52" r="16"/>
+     </g>
+     <g id="e01_02">
+      <circle class="video optional" cx="585" cy="392" id="svg_53" r="16"/>
+     </g>
+     <g id="e01_03">
+      <circle class="video optional" cx="585" cy="500" id="svg_54" r="16"/>
+     </g>
+     <g id="e01_04">
+      <circle class="video optional" cx="585" cy="594" id="svg_55" r="16"/>
+     </g>
+   
+     <g id="p00_01">
+        <line id="svg_71" x1="940" x2="940" y1="1055" y2="1236"/>
+        <rect class="exercise" height="32" id="svg_46" width="32" x="924" y="1052"/>
+        <line x1="940" x2="980" y1="1120" y2="1120"/>
+        <line x1="940" x2="900" y1="1155" y2="1155"/>  
+        <line x1="940" x2="980" y1="1190" y2="1190"/>
+     </g>
+      
+     <g id="p01_01">
+      <rect class="exercise" height="22" id="svg_75" width="22" x="966" y="1110"/>
+     </g>
+      
+      <g id="p01_02" data-textmargin="22">
+      <rect class="exercise" height="22" id="svg_80" width="22" x="892" y="1145"/>  
+      </g>
+     
+     <g id="p01_03">
+      <rect class="exercise" height="22" id="svg_82" width="22" x="966" y="1180"/>
+     </g>
+     
 
-     <circle class="video" cx="262" cy="564"  r="16"/>
-    </g>
-    <g id="v03_03">
-     <line  x1="262" x2="262" y1="640" y2="716"/>
-     <rect class="exercise" height="32"  width="32" x="246" y="620"/>
-    </g>
-    <g id="v04_01">
-     <line  x1="262" x2="116" y1="716" y2="780"/>
-     <line  x1="262" x2="346" y1="716" y2="810"/>
-     <circle class="video" cx="262" cy="716"  r="16"/>
-    </g>
-    <g id="v04_02">
-     <line  x1="116.5" x2="86" y1="782.5" y2="877.50001"/>
-     <line  x1="116" x2="262" y1="780" y2="874"/>
-     <circle class="video" cx="116" cy="780"   r="16"/>
-    </g>
-    <g id="v04_03">
-     <line  x1="346" x2="262" y1="810" y2="874"/>
-     <circle class="video" cx="346" cy="810"  r="16"/>
-    </g>
-    <g id="v04_04">
-     <line  x1="262" x2="326" y1="872" y2="936"/>
-     <line x1="262" y1="872" x2="262" y2="990"/>
-     <circle class="video" cx="262" cy="872"  r="16"/>
-    </g>
-    <g id="v04_05">
-     <circle class="video" cx="326" cy="938"  r="16"/>
-    </g>
-    <g id="v04_06">
-     <line class="dashed"  x1="86" x2="262" y1="879" y2="990"/>
-     <circle class="video" cx="86" cy="879"  r="16"/>
-    </g> 
-    <g id="v04_07">
-      <line  x1="262" x2="262" y1="990" y2="1060"/> 
-      <rect class="exercise" height="32"  width="32" x="246" y="990"/>
-    </g>
-    <g id="v05_01">
-      <line  x1="262" x2="262" y1="1060" y2="1140"/> 
-      <path class="lecture" d="m246,1060l32,0c-16,20 16,20 0,40l-32,0c16,-20 -16,-20 0,-40" />
-    </g>
-      <g id="v05_02">
-      <line x1=" 262" x2="262" y1="1140" y2="1208" />
-      <rect class="exercise" height="32"  width="32" x="246" y="1140"/>
-    </g>
-    <g id="v05_03">
-      <use href="#milestone" class="milestone" x="242" y="1208">        
-      </use>
-    </g>
-    
-    <g id="e01_01">
-     <circle class="video optional" cx="585" cy="327" r="16"/>
-    </g>
-    <g id="e01_02">
-     <circle class="video optional" cx="585" cy="392"  r="16"/>
-    </g>
-    <g id="e01_03">
-     <circle class="video optional" cx="585" cy="500"  r="16"/>
-    </g>
-    <g id="e01_04">
-     <circle class="video optional" cx="585" cy="569" r="16"/>
-    </g>
-    <g id="e01_05">
-     <circle class="video optional" cx="585" cy="629"  r="16"/>
     </g>
    </g>
-  </g>
-  <g class="layer" id="info">
-   <line class="dashed" fill="none"  stroke="#000000" stroke-width="5" x1="50" x2="475" y1="463.5" y2="463.5"/>
-   <line class="dashed" fill="none"  stroke="#000000" stroke-width="5" x1="50" x2="475" y1="679" y2="679"/>
-   <line class="dashed" fill="none"  stroke="#000000" stroke-width="5" x1="50" x2="475" y1="1040" y2="1040"/>
-   <text fill="#000000" font-family="Serif" font-size="32" font-weight="normal"  stroke="#000000" stroke-width="0" text-anchor="middle" transform="rotate(90, 69.5, 321)" x="69.5" xml:space="preserve" y="332">css and classes</text>
-   <text fill="#000000" font-family="Serif" font-size="32" font-weight="normal"  stroke="#000000" stroke-width="0" text-anchor="middle" transform="rotate(90, 69.5, 565.5)" x="69.5" xml:space="preserve" y="576.5">functions</text>
-   <text fill="#000000" font-family="Serif" font-size="32" font-weight="normal"  stroke="#000000" stroke-width="0" text-anchor="middle" transform="rotate(90, 69.5, 799)" x="69.5" xml:space="preserve" y="810">events</text>
-   <text fill="#000000" font-family="Serif" font-size="32" font-weight="normal" stroke="#000000" stroke-width="0" text-anchor="middle" transform="rotate(90, 69.5, 1185)" x="69.5" xml:space="preserve" y="1195">basic interactivity</text>
-  </g>
+   <g class="layer" id="info">
+    <line class="dashed" fill="none"  stroke="#000000" stroke-width="5" x1="50" x2="475" y1="463.5" y2="463.5"/>
+    <line class="dashed" fill="none"  stroke="#000000" stroke-width="5" x1="50" x2="475" y1="738" y2="738"/>
+    <line class="dashed" fill="none"  stroke="#000000" stroke-width="5" x1="50" x2="475" y1="1120" y2="1120"/>
+    <text fill="#000000" font-family="Serif" font-size="32" font-weight="normal" id="svg_60" stroke="#000000" stroke-width="0" text-anchor="middle" transform="rotate(90, 69.5, 321)" x="69.5" xml:space="preserve" y="332">css and classes</text>
+    <text fill="#000000" font-family="Serif" font-size="32" font-weight="normal" id="svg_61" stroke="#000000" stroke-width="0" text-anchor="middle" transform="rotate(90, 69.5, 565.5)" x="69.5" xml:space="preserve" y="576.5">functions</text>
+    <text fill="#000000" font-family="Serif" font-size="32" font-weight="normal" id="svg_62" stroke="#000000" stroke-width="0" text-anchor="middle" transform="rotate(90 69.5 858)" x="69.5" xml:space="preserve" y="869">events</text>
+    <text fill="#000000" font-family="Serif" font-size="32" font-weight="normal" id="svg_63" stroke="#000000" stroke-width="0" text-anchor="middle" transform="rotate(90 69.5 1280)" x="69.5" xml:space="preserve" y="1290">basic interactivity</text>
+   </g>
   
   
-  </g>
+  
+ </g>
 </svg>

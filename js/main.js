@@ -104,29 +104,36 @@ function prepareClickable(elm) {
   const g = document.querySelector(`#${elm.id}`);
   let geom = null;
 
-  if (elm.type === "video") {
-    geom = g.querySelector("circle");
-  } else if (elm.type === "exercise") {
-    geom = g.querySelector("rect");
-  } else if (elm.type === "lecture") {
-    geom = g.querySelector("path");
-  } else if (elm.type === "milestone") {
-    geom = g.querySelector("use");
+  try {
+    if (elm.type === "video") {
+      geom = g.querySelector("circle");
+    } else if (elm.type === "exercise") {
+      geom = g.querySelector("rect");
+    } else if (elm.type === "lecture") {
+      geom = g.querySelector("path");
+    } else if (elm.type === "milestone") {
+      geom = g.querySelector("use");
+    } 
+  } catch (err) {
+    // This would be for development only, or if the JSON or SVG has been compromised
+    console.error(err);
+    console.log(elm);
   }
-
+    
   // handle text
   const bbox = geom.getBBox();
   // create text element
   const textElm = document.createElementNS("http://www.w3.org/2000/svg", "text");
 
-  if (elm.type === "exercise") {
+  if (elm.type === "exercise" && !elm.subtype) {
     textElm.textContent = "Exercise: " + elm.description;
   } else {
     textElm.textContent = elm.description;
   }
 
   textElm.classList.add("description");
-  textElm.setAttribute("x", bbox.x + bbox.width + 6);
+  const margin = Number(g.dataset.textmargin) || 0;
+  textElm.setAttribute("x", bbox.x + bbox.width + 6 + margin);
 
   if (elm.subdescription) {
     const subText = document.createElementNS("http://www.w3.org/2000/svg", "text");
