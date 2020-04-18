@@ -369,11 +369,12 @@ function openMyProgress() {
   console.log("Open my progress");
 
   const progresstable = new ProgressTable(document.querySelector("#myprogress"));
+  progresstable.addField("Activity");
   progresstable.addHeader();
 
   progresstable.addRow(function (item) {
     return hasProgress("completed", { id: item.id });
-  });
+  }, {"Activity": "Status"});
 }
 
 
