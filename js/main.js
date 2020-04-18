@@ -286,7 +286,7 @@ function openInfoBox(id) {
 
     const checkbox = document.querySelector("#completed_activity");
 
-    if (checkbox.checked) {
+    if (!hasCompleted && checkbox.checked) {
       // add all skills unlocked
       if (item.skills) {
         item.skills.unlocks.forEach((unlock) => {
