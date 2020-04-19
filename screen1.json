@@ -127,12 +127,15 @@
     {
       "id": "v03_04",
       "type": "video",
+      "details": "<p>When you want to restart the same CSS animation inside a function, follow these three steps:</p><ol><li>(select the element).remove the class</li><li>(select the element).offsetHeight</li><li>(select the element).add the class</li></ol>",
       "skills": {
         "requires": ["classList", "functions"],
         "unlocks": "force reflow"
       },
       "description": "Restarting animations",
-      "subdescription": "remove, then add the same animation class"
+      "subdescription": "remove, then add the same animation class",
+      "youtube": "zq1nDbsSV3Y"
+
     },
     {
       "id": "v04_01",
@@ -208,22 +211,25 @@
     {
       "id": "v04_07",
       "type": "lecture",
-      "description": "A Walk in the park",
+      "description": "A Walk in the Park",
       "subdescription": "tiny exercises that builds a library",
       "skills": {
         "requires": ["addEventListener", "removeEventListener", "click event"],
         "unlocks": "Path to the park"
-      }
+      },
+      "youtube": "10XrKDuU_cc"
     },
     {
       "id": "v04_08",
-      "type": "video",
+      "type": "lecture",
       "description": "Event bubbling",
-      "subdescription": "problems and opportunities",
+      "subdescription": "issues and fixes",
+      "details": "<p>In the CoinClicker mini game, you might encounter some problems with the explosion and shaking of the screen. In this short \"code lecture\" I try to explain what happens, and how to fix the problems.",
       "skills": {
-        "requires": ["events", "addEventListener", "removeEventListener"],
+        "requires": ["events", "addEventListener", "removeEventListener", "force reflow"],
         "unlocks": ["event bubbling", "requestAnimationFrame"]
-      }
+      },
+      "youtube": "Z_4B5mLfqM0"
     },
     {
       "id": "v05_01",
