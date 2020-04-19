@@ -138,6 +138,10 @@ svg .video:hover, svg .lecture:hover, svg .exercise:hover, svg .milestone:hover 
 
 /* SVG styles */
 
+#svg_container { 
+  border: 1px solid transparent; 
+}
+
 #info {
   opacity: 0.25;
 }
