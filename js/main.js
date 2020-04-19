@@ -61,11 +61,11 @@ async function start() {
   console.log("start");
 
   // load the SVG
-  const svgData = await loadSVG("screen1.svg");
+  const svgData = await loadSVG("screen1.svg?v=2");
   document.querySelector("#svg_container").innerHTML = svgData;
 
   // load JSON
-  clickables = await loadJSON("screen1.json");
+  clickables = await loadJSON("screen1.json?v=2");
 
   clickables = clickables.clickables;
 
