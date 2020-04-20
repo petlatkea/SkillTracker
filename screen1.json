@@ -347,8 +347,172 @@
         "requires": ["The Park", "animationiteration"],
         "unlocks": "xp"
       }
-    }
+    },
+    {
+      "id": "v06_00",
+      "type": "lecture",
+      "description": "Keeping score",
+      "subdescription": "Use variables to keep track of points, and health",
+      "skills": {
+        "unlocks": "variables"
+      },
+      "youtube": "WGJaJjKDsE4"
+    },
+    {
+      "id": "v06_01",
+      "type": "video",
+      "description": "An environment for variables",
+      "subdescription": "Changin the old red ball to something new and exciting!",
+      "skills": {
+        "requires": "environment",
+        "unlocks": "variable environment"
+      },
+      "youtube": "GaXWoIXxeWM"
+    },
 
+    {"id": "v06_02",
+      "type": "video",
+      "description": "Declaring and setting variables",
+      "subdescription": "How to create variables, and set their values",
+      "skills": {
+        "requires": "variables",
+        "unlocks": ["declaring variables", "let", "="]
+      },
+      "youtube": "ri9na7T9rlI"
+    },
+    {"id": "v06_03",
+      "type": "video",
+      "description": "Variable scope",
+      "subdescription": "Where to create variables for them to be useful",
+      "skills": {
+        "requires": "declaring variables",
+        "unlocks": "scope"
+      },
+      "youtube": "s9_1O7B-rDE"
+    },
+    {"id": "v06_04",
+      "type": "video",
+      "description": "Counting up",
+      "skills": {
+        "requires": "scope",
+        "unlocks": "count up"
+      },
+      "youtube": "qW3M-SOa4Jc"
+    },
+    {"id": "v06_05",
+      "type": "video",
+      "description": "Counting down",
+      "skills": {
+        "requires": "scope",
+        "unlocks": "count down"
+      },
+      "youtube": "d9yuYMpCpgQ"
+
+    },
+    {"id": "v06_06",
+      "type": "video",
+      "description": "Variations on counting",
+      "subdescription": "Counting in easier ways and bigger steps",
+      "skills": {
+        "requires": ["count up","count down"],
+        "unlocks": ["++", "--", "+=", "counting"]
+      },
+      "youtube": "ZdAW8tVDoqM"
+    },
+    {"id": "v06_07",
+      "type": "video",
+      "description": "Outputting with concatenation",
+      "subdescription": "Displaying variables as part of a text",
+      "skills": {
+        "requires": ["variables","counting","console"],
+        "unlocks": "concatenation"
+      },
+      "youtube": "PJzyEIWp8Fo"
+    },
+    {"id": "v06_08",
+      "type": "video",
+      "description": "Outputting numbers",
+      "subdescription": "Show score on the screen - simply as digits",
+      "skills": {
+        "requires": ["querySelector", "=", "concatenation"],
+        "unlocks": "textContent"
+      },
+      "youtube": "HbURf7z8Jqk"
+
+    },
+    {"id": "v06_09",
+      "type": "video",
+      "description": "Outputting hearts",
+      "subdescription": "Show lives as a number of hearts",
+      "skills": {
+        "requires": ["querySelector", "concatenation", "classList"],
+        "unlocks": ["hearts", "variable classes"]
+      },
+      "youtube": "UrKtIGjoWao"
+    },
+    {"id": "v06_10",
+      "type": "video",
+      "description": "Outputting a progressbar",
+      "subdescription": "Show score or health as a growing/shrinking progressbar",
+      "skills": {
+        "requires": ["querySelector", "concatenation", "classList", "count up", "count down"],
+        "unlocks": ["progressbar (steps)", "variable classes"]
+      },
+      "youtube": "KOncdg8_AHI"
+    },
+    {"id": "v06_11",
+      "type": "video",
+      "description": "Outputting a chicken'o'meter",
+      "subdescription": "Show score or health as an image from a list",
+      "details": "<p>Watch the <a href='https://www.youtube.com/watch?v=B8HT8aUb5q4'>youtube video-essay from Ahoy</a> about chicken'o'meters, for all the background-information, and inspiration you could wish for.<br>Download the Doom-guy images here: <a href='http://www.petlatkea.dk/2020/basicanimation/doom-guy.zip'>doom-guy.zip</a>.</p>",
+      "skills": {
+        "requires": ["querySelector", "concatenation", "classList"],
+        "unlocks": ["chicken'o'meter", "clear classList", "variable classes"]
+      },
+      "youtube": "didgnqATTFw"
+    },
+    {"id": "v06_12",
+      "type": "video",
+      "description": "Advanced progressbar fix",
+      "subdescription": "A better way of handling adding and removing classes for progressbar (or chicken'o'meter)",
+      "youtube": "0LXEdEnYqrU",
+      "skills": {
+        "requires": "progressbar (steps)",
+        "unlocks": "remove before"
+      }
+    },
+    {
+      "id": "v06_13",
+      "type": "exercise",
+      "description": "Count points and lives",
+      "subdescription": "Expand the CoinClicker mini game with counters",
+      "skills": {
+        "requires": "counting",
+        "unlocks": ["xp", "CoinClicker count"]
+      }
+    },
+    {
+      "id": "v06_14",
+      "type": "exercise",
+      "description": "Win money, lose lives",
+      "subdescription": "Make the CoinClicker mini game show score and hearts",
+      "skills": {
+        "requires": ["hearts", "textContent", "CoinClicker count"],
+        "unlocks": "CoinClicker score"
+      }
+
+    }, 
+    {
+      "id": "v06_15",
+      "type": "milestone",
+      "description": "04.03.01",
+      "subdescription": "Core gameplay with score and lives",
+      "skills": {
+        "requires":"CoinClicker score",
+        "unlocks": "A feeling that you can build your game!"
+      },      
+      "details": "<p>You are going to expand the experimental version of your own game - still <em>\"one to throw away\"</em>, but adding visualisations of score and health.<br>See the complete assignment-description in Fronter, by following <a href='https://kea-fronter.itslearning.com/LearningToolElement/ViewLearningToolElement.aspx?LearningToolElementId=739610'>this link</a></p>"
+    }
 
 
   ]

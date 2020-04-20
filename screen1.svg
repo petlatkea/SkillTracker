@@ -1,7 +1,7 @@
 <?xml version="1.0"?>
-<svg width="1920" height="1400" xmlns="http://www.w3.org/2000/svg" xmlns:svg="http://www.w3.org/2000/svg">
+<svg width="1920" height="2400" viewBox="0 0 1920 2400" xmlns="http://www.w3.org/2000/svg" xmlns:svg="http://www.w3.org/2000/svg">
  <defs>
-  <!-- <style>line, .video, .exercise, .lecture, .milestone, polyline {
+   <!-- <style>line, .video, .exercise, .lecture, .milestone, polyline {
             stroke: #000000;
             stroke-width: 2;
             fill: #ffffff;
@@ -13,7 +13,7 @@
           
           .optional {
           stroke: red;
-          }</style> -->
+          }</style>  -->
    <g id="milestone">
     <path d="M40.5,9.92v40H.52V10.52c0-.2,0-.4,0-.6A9.45,9.45,0,0,1,9.91.5H31.09A9.46,9.46,0,0,1,40.5,9.92Z"/>
     <line x1="0.5" y1="12.91" x2="40.52" y2="12.91"/>
@@ -160,6 +160,94 @@
       <rect class="exercise" height="22"  width="22" x="966" y="1180"/>
      </g>
      
+     <g id="v06_00">
+      <line x1="262" x2="262" y1="1450" y2="1524" />
+      <line x1="262" x2="320" y1="1450" y2="1490" />
+      <path class="lecture" d="m246,1430l32,0c-16,20 16,20 0,40l-32,0c16,-20 -16,-20 0,-40z"/>
+     </g>
+
+     <g id="v06_01">
+      
+      <circle class="video" cx="320" cy="1490" r="16"  />   
+     </g>
+
+     <g id="v06_02">
+     <line x1="262" x2="262" y1="1524" y2="1588" />
+      <circle class="video" cx="262" cy="1524" r="16"  />   
+     </g>
+
+     <g id="v06_03">
+      <line x1="262" x2="130" y1="1588" y2="1652" />
+      <line x1="262" x2="394" y1="1588" y2="1652" />
+      <circle class="video" cx="262" cy="1588" r="16"  />   
+     </g>
+
+     <g id="v06_04">
+      <line x2="262" x1="130" y2="1716" y1="1652" />
+      
+      <circle class="video" cx="130" cy="1652" r="16"  />   
+     </g>
+
+     <g id="v06_05">
+     <line x2="262" x1="394" y2="1716" y1="1652" />
+      <circle class="video" cx="394" cy="1652" r="16"  />   
+     </g>
+
+     <g id="v06_06">
+      <line x1="262" x2="262" y1="1716" y2="1780" />
+      <circle class="video" cx="262" cy="1716" r="16"  />   
+     </g>
+
+    <g id="v06_13">
+      <line x1="262" x2="262" y1="1780" y2="1844" />
+      
+      <rect class="exercise" width="32 " height="32" x="246" y="1764" />
+     </g>
+     <g id="v06_07">
+      <line x1="262" x2="262" y1="1844" y2="2044" />
+      <line x1="262" x2="310" y1="1894" y2="1894" />
+      <line x1="262" x2="310" y1="1944" y2="1944" />
+      <line x1="262" x2="340" y1="1994" y2="1994" />
+      <line x1="262" x2="340" y1="2044" y2="2044" />
+      <circle class="video" cx="262" cy="1844" r="16"  />     
+     </g>
+
+     <g id="v06_08">
+      <circle class="video" cx="310" cy="1894" r="16"  />   
+     </g>
+
+     <g id="v06_09">
+      <line x1="310" x2="310" y1="1944" y2="2140" />
+      <circle class="video" cx="310" cy="1944" r="16"  />   
+     </g>
+
+      <g id="v06_11">
+      <circle class="video" cx="340" cy="1994" r="16"  />   
+     </g>
+
+     <g id="v06_10">
+      <line class="optional" x1="340" x2="380" y1="2044" y2="2096" />
+      <circle class="video" cx="340" cy="2044" r="16"  />   
+     </g>
+
+     
+     
+
+     <g id="v06_12">
+      <circle class="video" cx="380" cy="2096" r="16"  />   
+     </g>
+
+    <g id="v06_14">
+    <line x1="310" x2="310" y1="2140" y2="2220" />
+      
+      
+
+      <rect class="exercise" width="32 " height="32" x="296" y="2140" />
+     </g>
+      <g id="v06_15">
+       
+       <use href="#milestone" class="milestone" x="292" y="2220"/>
+     </g>
 
     </g>
    </g>
