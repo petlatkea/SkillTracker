@@ -191,7 +191,7 @@ function openInfoBox(id) {
   if (item.youtube) {
     document.querySelector(".video-wrapper").classList.remove("hide");
     const videoframe = document.querySelector("[data-data='video']");
-    videoframe.src = "https://www.youtube.com/embed/" + item.youtube;
+    videoframe.src = "https://www.youtube.com/embed/" + item.youtube + '?rel=0&embed_config={"disableRelatedVideos":true}';
   } else {
     document.querySelector(".video-wrapper").classList.add("hide");
   }
