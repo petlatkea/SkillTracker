@@ -362,7 +362,7 @@
       "id": "v06_01",
       "type": "video",
       "description": "An environment for variables",
-      "subdescription": "Changin the old red ball to something new and exciting!",
+      "subdescription": "Changing the old red ball to something new and exciting!",
       "skills": {
         "requires": "environment",
         "unlocks": "variable environment"
@@ -512,6 +512,216 @@
         "unlocks": "A feeling that you can build your game!"
       },      
       "details": "<p>You are going to expand the experimental version of your own game - still <em>\"one to throw away\"</em>, but adding visualisations of score and health.<br>See the complete assignment-description in Fronter, by following <a href='https://kea-fronter.itslearning.com/LearningToolElement/ViewLearningToolElement.aspx?LearningToolElementId=739610'>this link</a></p>"
+    },
+ 
+    {
+      "id": "v07_01",
+      "type": "video",
+      "description": "Random Numbers",
+      "subdescription": "Why and how to get randomness into your game",
+      "skills": {
+        "requires": ["variables", "functions"],
+        "unlocks": ["random"]
+      }
+    },
+    {
+      "id": "v07_02",
+      "type": "video",
+      "description": "The Formula",
+      "subdescription": "Quick'n'dirty trick to get whole random numbers",
+      "details": "<p>If you want a random number between a min and a max value, use <code>Math.floor(Math.random()*(max-min+1)+min)</code>.</p>",
+      "skills": {
+        "requires": "random",
+        "unlocks": "random min-max"
+      }
+    },
+    {
+      "id": "v07_03",
+      "type": "video",
+      "description": "The detailed explanation",
+      "subdescription": "How the formula is derived, and why it works",
+      "details": "<p>Warning: Contains math!</p>",
+      "skills": {
+        "requires": "random",
+        "unlocks": ["random min-max", "Math"]
+      }
+    },
+    {
+      "id": "v07_04",
+      "type": "video",
+      "description": "Random classes",
+      "subdescription": "Add random positions, speed or image",
+      "skills": {
+        "requires": ["random", "random min-max", "concatenation"],
+        "unlocks": "random classes"
+      }
+    },
+    {
+      "id": "v07_05",
+      "type": "exercise",
+      "description": "A simple dice",
+      "subdescription": "Build JavaScript to show a random number 1-6",
+      "skills": {
+        "requires": ["events","random min-max"],
+        "unlocks": ["simple dice"]
+      }
+    },
+    {
+      "id": "v07_06",
+      "type": "exercise",
+      "description": "A 3D dice",
+      "subdescription": "Build an actual 3D animated dice",
+      "skills": {
+        "requires": ["events","random min-max", "random classes"],
+        "unlocks": ["3D dice"]
+      }
+    },
+    {
+      "id": "v07_07",
+      "type": "exercise",
+      "description": "CoinClicker random",
+      "subdescription": "CoinClicker with randomized positions",
+      "skills": {
+        "requires": ["random min-max", "random classes", "CoinClicker mini"],
+        "unlocks": ["CoinClicker random"]
+      }
+    },
+    {
+      "id": "v08_00",
+      "type": "lecture",
+      "description": "Decisions and conditions",
+      "skills": {
+        "unlocks": ["decisions"]
+      }
+    },
+    {
+      "id": "v08_01",
+      "type": "video",
+      "description": "if",
+      "skills": {
+        "requires": ["decisions", "variables"],
+        "unlocks": ["if", "comparisons", "conditions"]
+      }
+    },
+    {
+      "id": "v08_02",
+      "type": "video",
+      "description": "else",
+      "skills": {
+        "requires": ["if"],
+        "unlocks": ["else"]
+      }
+    },
+    {
+      "id": "v08_03",
+      "type": "video",
+      "description": "nesting",
+      "subdescription": "When you want to ask more questions, before you decide.",
+      "skills": {
+        "requires": ["if", "else"],
+        "unlocks": ["nesting"]
+      }
+    },
+    {
+      "id": "v08_04",
+      "type": "video",
+      "description": "chaining",
+      "subdescription": "When you have more than two possible answers",
+      "skills": {
+        "requires": ["if", "else"],
+        "unlocks": ["chaining"]
+      }
+    },
+
+
+    {
+      "id": "v08_06",
+      "type": "milestone",
+      "description": "04.03.02",
+      "subdescription": "Core gameplay with danger and game over"
+    },
+
+    {
+      "id": "v09_01",
+      "type": "video",
+      "description": "Other uses for variables",
+      "subdescription": "... for much more than counting",
+      "details": "<p>To test the various other uses of variables, I'm expanding quite a bit on the basic game - go ahead and follow along.</p>",
+      "skills": {
+        "requires": ["variables", "functions", "variable environment"],
+        "unlocks": "variable environment 2"
+      },
+      "youtube": "71DWoykF4AQ"
+    },
+
+    {
+      "id": "v09_02",
+      "type": "video",
+      "description": "Temporary scratchpad",
+      "subdescription": "improve the readability (and reuseability) of code",
+      "skills": {
+        "requires": ["variables", "variable environment 2"],
+        "unlocks": ["temporary variables", "storing querySelector"]
+      },
+      "youtube": "m1q4NySxxp8"
+    },
+    {
+      "id": "v09_03",
+      "type": "video",
+      "description": "Generalization with this",
+      "subdescription": "This will save you a lot of extra function writing!",
+      "skills": {
+        "requires": ["temporary variables"],
+        "unlocks": ["this"]
+      },
+      "youtube": "JTSN4ytYs6w"
+    },
+
+    {
+      "id": "v09_04",
+      "type": "video",
+      "description": "Binding this to functions",
+      "subdescription": "A bit advanced, so don't feel pressured ...",
+      "skills": {
+        "requires": ["this"],
+        "unlocks": ["bind"]
+      },
+      "youtube": "DKba7z-k-FU"
+    },
+
+    {
+      "id": "e02_01",
+      "type": "lecture",
+      "description": "Variables in the console",
+      "subdescription": "View and edit variables live in the console",
+      "skills": {
+        "requires": ["console","variables"],
+        "unlocks": "xp"
+      },
+      "youtube": "SkuKYKxFbb0"
+    },
+    {
+      "id": "e02_02",
+      "type": "lecture",
+      "description": "Using the debugger",
+      "subdescription": "Single-step through your code",
+      "skills": {
+        "requires": ["variables","functions"],
+        "unlocks": "debugger"
+      },
+      "youtube": "IrKIyPWejfI"
+    },
+    {
+      "id": "e02_04",
+      "type": "lecture",
+      "description": "Rubberducking",
+      "subdescription": "The most powerful debugging tool you'll ever know.",
+      "skills": {
+        "requires": "debugger",
+        "unlocks": "rubberducking"
+      },
+      "details": "<p><b>Rubberducking</b> is sometimes also known as <b>Rubber Duck Debugging</b>, and is explained in <a href='https://en.wikipedia.org/wiki/Rubber_duck_debugging'>this article from WikiPedia</a>.</p>",
+      "youtube": "pbAapGEjpJM"
     }
 
 
