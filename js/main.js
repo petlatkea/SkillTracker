@@ -102,6 +102,12 @@ function prepareClickables() {
 function prepareClickable(elm) {
   // find svg g
   const g = document.querySelector(`#${elm.id}`);
+
+  // if there is no g, write a warning, and skip
+  if (!g) {
+    console.warn("No SVG element for " + elm.id + " found - skipping!");
+    return;
+  }
   let geom = null;
 
   try {
@@ -113,11 +119,17 @@ function prepareClickable(elm) {
       geom = g.querySelector("path");
     } else if (elm.type === "milestone") {
       geom = g.querySelector("use");
-    } 
+    } else {
+      console.warn("No geom found for: " + elm.id);
+    }
   } catch (err) {
     // This would be for development only, or if the JSON or SVG has been compromised
     console.error(err);
     console.log(elm);
+  }
+
+  if (geom === null) {
+    console.warn("No geom found for: " + elm.id);
   }
     
   // handle text
@@ -150,9 +162,11 @@ function prepareClickable(elm) {
   }
   g.append(textElm);
 
-  // add click-event to geometry and both texts
-  geom.addEventListener("click", openModal);
-  textElm.addEventListener("click", openModal);
+  if (!g.classList.contains("unavailable")) {
+    // add click-event to geometry and both texts - if not unavailable
+    geom.addEventListener("click", openModal);
+    textElm.addEventListener("click", openModal);
+  }
 }
 
 function getItemWithId(id) {
@@ -318,26 +332,28 @@ function updateVisualTree() {
   clickables.forEach((elm) => {
     const g = document.querySelector(`#${elm.id}`);
 
-    // only if it requires skills - otherwise, leave it enabled!
-    if (elm.skills && elm.skills.requires) {
-      g.classList.remove("enabled");
-      g.classList.remove("disabled");
+    if (g) {
+      // only if it requires skills - otherwise, leave it enabled!
+      if (elm.skills && elm.skills.requires) {
+        g.classList.remove("enabled");
+        g.classList.remove("disabled");
 
-      if (hasSkills(elm.skills.requires)) {
-        g.classList.add("enabled");
+        if (hasSkills(elm.skills.requires)) {
+          g.classList.add("enabled");
+        } else {
+          g.classList.add("disabled");
+        }
       } else {
-        g.classList.add("disabled");
+        g.classList.remove("disabled");
+        g.classList.add("enabled");
       }
-    } else {
-      g.classList.remove("disabled");
-      g.classList.add("enabled");
-    }
-
-    // check if it is completed or not
-    if (hasProgress("completed", { id: elm.id })) {
-      g.classList.add("completed");
-    } else {
-      g.classList.remove("completed");
+      
+      // check if it is completed or not
+      if (hasProgress("completed", { id: elm.id })) {
+        g.classList.add("completed");
+      } else {
+        g.classList.remove("completed");
+      }
     }
   });
 }
