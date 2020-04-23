@@ -163,11 +163,13 @@ svg .video:hover, svg .lecture:hover, svg .exercise:hover, svg .milestone:hover 
 line,
 circle,
 rect,
-polyline {
+polyline, 
+polygon {
   stroke-width: 2;
+  stroke: #000000;
 }
 
-polyline {
+polyline, polygon {
   fill: none;
 }
 
@@ -183,6 +185,16 @@ polyline {
   transform-box: fill-box;
   transform-origin: center center;
   animation: shortpulse 0.4s cubic-bezier(0.67, 0.47, 0.33, 1.46) 1;
+}
+
+.unavailable text {
+  cursor: not-allowed;
+  stroke: #ac4549;
+  fill: #e97175;
+}
+
+.unavailable:hover * {
+  cursor: not-allowed;
 }
 
 @keyframes shortpulse {
