@@ -522,7 +522,8 @@
       "skills": {
         "requires": ["variables", "functions"],
         "unlocks": ["random"]
-      }
+      },
+      "youtube": "esvg7Gaa4N4"
     },
     {
       "id": "v07_02",
@@ -533,7 +534,8 @@
       "skills": {
         "requires": "random",
         "unlocks": "random min-max"
-      }
+      },
+      "youtube": "ZC3qFs4ouyM"
     },
     {
       "id": "v07_03",
@@ -544,7 +546,8 @@
       "skills": {
         "requires": "random",
         "unlocks": ["random min-max", "Math"]
-      }
+      },
+      "youtube": "Va1elpY_x90"
     },
     {
       "id": "v07_04",
@@ -554,30 +557,12 @@
       "skills": {
         "requires": ["random", "random min-max", "concatenation"],
         "unlocks": "random classes"
-      }
+      },
+      "youtube": "IXlUb68GlaU"
     },
+    
     {
       "id": "v07_05",
-      "type": "exercise",
-      "description": "A simple dice",
-      "subdescription": "Build JavaScript to show a random number 1-6",
-      "skills": {
-        "requires": ["events","random min-max"],
-        "unlocks": ["simple dice"]
-      }
-    },
-    {
-      "id": "v07_06",
-      "type": "exercise",
-      "description": "A 3D dice",
-      "subdescription": "Build an actual 3D animated dice",
-      "skills": {
-        "requires": ["events","random min-max", "random classes"],
-        "unlocks": ["3D dice"]
-      }
-    },
-    {
-      "id": "v07_07",
       "type": "exercise",
       "description": "CoinClicker random",
       "subdescription": "CoinClicker with randomized positions",
@@ -632,7 +617,16 @@
         "unlocks": ["chaining"]
       }
     },
-
+    {
+      "id": "v08_05",
+      "type": "exercise",
+      "description": "CoinClicker game over",
+      "subdescription": "CoinClicker with game over",
+      "skills": {
+        "requires": ["if", "else", "CoinClicker mini"],
+        "unlocks": ["CoinClicker gameover"]
+      }
+    },
 
     {
       "id": "v08_06",
