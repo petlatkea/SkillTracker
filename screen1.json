@@ -577,7 +577,8 @@
       "description": "Decisions and conditions",
       "skills": {
         "unlocks": ["decisions"]
-      }
+      },
+      "youtube": "d1YHvBsYZ94"
     },
     {
       "id": "v08_01",
@@ -586,7 +587,8 @@
       "skills": {
         "requires": ["decisions", "variables"],
         "unlocks": ["if", "comparisons", "conditions"]
-      }
+      },
+      "youtube": "J3mij5jGvAk"
     },
     {
       "id": "v08_02",
@@ -595,27 +597,30 @@
       "skills": {
         "requires": ["if"],
         "unlocks": ["else"]
-      }
+      },
+      "youtube": "LdO4RLNtQLM"
     },
     {
       "id": "v08_03",
       "type": "video",
-      "description": "nesting",
+      "description": "nesting (multiple ifs)",
       "subdescription": "When you want to ask more questions, before you decide.",
       "skills": {
         "requires": ["if", "else"],
         "unlocks": ["nesting"]
-      }
+      },
+      "youtube": "mYuaE6qOPSY"
     },
     {
       "id": "v08_04",
       "type": "video",
-      "description": "chaining",
+      "description": "chaining (multiple if elses)",
       "subdescription": "When you have more than two possible answers",
       "skills": {
         "requires": ["if", "else"],
         "unlocks": ["chaining"]
-      }
+      },
+      "youtube": "0YbdEgoBVCs"
     },
     {
       "id": "v08_05",

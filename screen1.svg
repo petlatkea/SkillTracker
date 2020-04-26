@@ -282,32 +282,32 @@
      </g>
 
 
-     <g id="v08_00" class="unavailable">
+     <g id="v08_00" class="">
       <line x1="540" x2="540" y1="2460" y2="2530" />
           <path class="lecture" d="m525,2430l32,0c-16,20 16,20 0,40l-32,0c16,-20 -16,-20 0,-40z" /> 
      </g>
 
-<g id="v08_01" class="unavailable">
+<g id="v08_01" class="">
 <line x1="540" x2="540" y1="2530" y2="2600" />
   <circle class="video" cx="540" cy="2530" r="16" />
 </g>
 
-<g id="v08_02" class="unavailable">
+<g id="v08_02" class="">
 <line x1="540" x2="540" y1="2600" y2="2700" />
 <line x1="540" x2="590" y1="2650" y2="2650" />
   <circle class="video" cx="540" cy="2600" r="16" />
 </g>
 
-<g id="v08_03" class="unavailable">
+<g id="v08_03" class="">
   <circle class="video" cx="590" cy="2650" r="16" />
 </g>
 
-<g id="v08_04" class="unavailable">
+<g id="v08_04" class="">
   <line x1=" 540" x2="540" y1="2700" y2="2850" />
   <circle class="video" cx="540" cy="2700" r="16" />
 </g>
 
-<g id="v08_05" class="unavailable">
+<g id="v08_05" class="">
  <polyline points="540 2860, 540 2920, 318 2920 318 2940" />
  <rect class="exercise" width="32" height="32" x="525" y="2840"/>
 
