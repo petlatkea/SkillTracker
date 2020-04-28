@@ -193,6 +193,10 @@ polyline, polygon {
   fill: #e97175;
 }
 
+[data-text-align="right"] text {
+  text-anchor: end;
+}
+
 .unavailable:hover * {
   cursor: not-allowed;
 }

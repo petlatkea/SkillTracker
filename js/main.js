@@ -144,14 +144,18 @@ function prepareClickable(elm) {
   }
 
   textElm.classList.add("description");
-  const margin = Number(g.dataset.textmargin) || 0;
+  let margin = Number(g.dataset.textmargin) || 0;
+
+  if (g.dataset.textAlign === "right") {
+    margin = -42;
+  }
   textElm.setAttribute("x", bbox.x + bbox.width + 6 + margin);
 
   if (elm.subdescription) {
     const subText = document.createElementNS("http://www.w3.org/2000/svg", "text");
     subText.textContent = elm.subdescription;
     subText.classList.add("subdescription");
-    subText.setAttribute("x", bbox.x + bbox.width + 6);
+    subText.setAttribute("x", bbox.x + bbox.width + 6 + margin);
 
     textElm.setAttribute("y", bbox.y + 14);
 
