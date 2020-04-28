@@ -320,9 +320,11 @@
      <!-- Screen 4 -->
 
      <g id="v09_01">
-      <line x1="310" x2="290" y1="3100" y2="3170" />
-      <line class="optional" x1="310" x2="585" y1="3100" y2="3100" />
-      <circle class="video" cx="310" cy="3100" r="16"/>
+      <line x1="260" x2="290" y1="3100" y2="3170" />
+      <line class="optional" x1="260" x2="585" y1="3100" y2="3100" />
+      <line x1="260" x2="200" y1="3100" y2="3210" />
+      <line x1="260" x2="270" y1="3100" y2="3270" />
+      <circle class="video" cx="260" cy="3100" r="16"/>
      </g>
      <g id="v09_02">
       <line x1="290" x2="320" y1="3170" y2="3230" />
@@ -331,14 +333,32 @@
      </g>
      <g id="v09_03">
       <line x1="320" x2="340" y1="3230" y2="3280" />
-
       <circle class="video" cx="320" cy="3230" r="16"/>
      </g>
 
      <g id="v09_04">
-      <line class="dashed" x1="340" x2="360" y1="3280" y2="3380" />
+      
       <circle class="video" cx="340" cy="3280" r="16"/>
      </g>
+
+      <g id="v09_05" data-text-align="right">
+        <circle class="video" cx="200" cy="3210" r="16"/>
+      </g>
+
+      <g id="v09_06" data-text-align="right">
+        <line x1="270" x2="230" y1="3270" y2="3330" />
+        <line x1="270" x2="300" y1="3270" y2="3370" />
+         <circle class="video" cx="270" cy="3270" r="16" />
+      </g>
+
+    <g id="v09_07" data-text-align="right">
+         <circle class="video" cx="230" cy="3330" r="16" />
+      </g>
+
+      <g id="v09_08">
+         <circle class="video" cx="300" cy="3370" r="16" />
+      </g>
+
 
      <g id="e02_01">
       <path class="lecture optional" d="m570,3080l32,0c-16,20 16,20 0,40l-32,0c16,-20 -16,-20 0,-40z" />
@@ -350,7 +370,7 @@
      </g>
 
     <g id="e02_04">
-    <line class="dashed" x1="585" x2= "550" y1="3310" y2="3380" />
+    <!-- <line class="dashed" x1="585" x2= "550" y1="3310" y2="3380" /> -->
       <path class="lecture optional" d="m570,3290l32,0c-16,20 16,20 0,40l-32,0c16,-20 -16,-20 0,-40z" />
      </g>
 

@@ -689,6 +689,51 @@
     },
 
     {
+      "id": "v09_05",
+      "type": "video",
+      "description": "Counting streaks",
+      "subdescription": "keep track of streaks, and highscore",
+      "skills": {
+        "requires": "variable environment 2",
+        "unlocks": ["streaks", "highscore", "highest value"]
+      },
+      "youtube": "d4nYYzKDRic"
+    },
+    {
+      "id": "v09_06",
+      "type": "video",
+      "description": "Booleans and flags",
+      "subdescription": "Switches to keep track of what happened",
+      "skills": {
+        "requires": ["variable environment 2", "if"],
+        "unlocks": ["boolean", "flags"]
+      },
+      "youtube": "tx-QVZgGX1E"
+    },
+    {
+      "id": "v09_07",
+      "type": "video",
+      "description": "Toggle booleans",
+      "subdescription": "turn flags on and off",
+      "skills": {
+        "requires": ["boolean", "if", "else"],
+        "unlocks": "toggle"
+      },
+      "youtube": "9vvypzage-M"
+    },
+    {
+      "id": "v09_08",
+      "type": "video",
+      "description": "Using flags as locks",
+      "subdescription": "Preventing things from happening more than once",
+      "details": "<p>Very useful when handling timers that should sometimes be ignored.</p>",
+      "skills": {
+        "requires": ["boolean", "if"],
+        "unlocks": "locks"
+      },
+      "youtube": "5xJYifE28iI"
+    },
+    {
       "id": "e02_01",
       "type": "lecture",
       "description": "Variables in the console",
