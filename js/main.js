@@ -30,6 +30,19 @@ function setupUI() {
   M.Modal.getInstance(document.querySelector("#modal-allprogress")).options.onOpenStart = openAllProgress;
 }
 
+function databaseUnavailable() {
+  // unhide the security-notice
+  const notice = document.querySelector("#security-notice");
+
+  notice.classList.remove("hide");
+  requestAnimationFrame(() =>
+    requestAnimationFrame(() => notice.classList.add("show"))
+  );
+
+  notice.addEventListener("click", () => notice.classList.toggle("minimized") );
+
+}
+
 function setupUser(user) {
   if (user) {
     // logged in!

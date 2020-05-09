@@ -26,9 +26,16 @@ function authStateChanged(user) {
       readProgressEvents();
       readSkills();
     })
-     .catch((err) => {
-        // Sometimes the doc isn't ready when the user is newly created - we just ignore that, and get again a bit later.
-        console.warn("Error during setupUser - ignored");
+      .catch((err) => {
+        if (err.message === "Missing or insufficient permissions.") {
+          databaseUnavailable();
+        } else {
+          
+
+          // Sometimes the doc isn't ready when the user is newly created - we just ignore that, and get again a bit later.
+          console.warn("Error during setupUser - ignored");
+          console.warn(err.message);
+        }
      });
 
     // NOTE: If user had just been created, data might not be available yet!
